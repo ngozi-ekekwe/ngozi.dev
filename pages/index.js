@@ -1,11 +1,12 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import Header from '../components/Header';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Ngozi Ekekwe Frontend developer</title>
+        <link rel="icon" href="/favicon.ico" />
         <meta charSet="UTF-8" />
         <meta
           name="keywords"
@@ -44,7 +45,7 @@ export default function Home() {
         {/* facebook */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </Head>
-      
+      <Header />
     </div>
   );
 }
