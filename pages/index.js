@@ -1,8 +1,11 @@
+import React, { useState } from "react";
 import Head from "next/head";
-import Header from '../components/Header';
-import Cursor from '../components/Cursor';
+import Header from "../components/Header";
+import Cursor from "../components/Cursor";
+import Sidebar from "../components/Sidebar";
 
 export default function Home() {
+  const [isActive, setIsActive] = useState(false);
   return (
     <div>
       <Head>
@@ -46,7 +49,8 @@ export default function Home() {
         {/* facebook */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </Head>
-      <Header />
+      <Header isActive={isActive} setIsActive={setIsActive} />
+      <Sidebar isActive={isActive} />
       <Cursor />
     </div>
   );
