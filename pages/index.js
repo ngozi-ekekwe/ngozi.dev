@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from '../components/Header';
+import Cursor from '../components/Cursor';
 
 export default function Home() {
   return (
@@ -46,6 +47,7 @@ export default function Home() {
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </Head>
       <Header />
+      <Cursor />
     </div>
   );
 }

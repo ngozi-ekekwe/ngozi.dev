@@ -4,8 +4,8 @@ function Header(props) {
   return (
     <StyledHeader>
       <Nav>
-        <Logo href="/">ngozi-ekekwe</Logo>
-        <Hamburger>
+        <Logo href="/" id="logo">ngozi-ekekwe</Logo>
+        <Hamburger id="hamburger">
           <Line></Line>
           <Line></Line>
         </Hamburger>
