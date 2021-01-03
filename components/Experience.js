@@ -45,6 +45,7 @@ function Experiences() {
 
 const ExperiencesStyled = styled.section`
   width: 100%;
+  margin: 3rem 0;
   background-image: linear-gradient(to right, #e3ffe7, #d9e7ff);
 `;
 

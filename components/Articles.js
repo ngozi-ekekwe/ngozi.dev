@@ -5,10 +5,12 @@ function Articles() {
     <ArticleWrapper>
       <SectionTitle>Journal</SectionTitle>
       <ArticleStyled>
-        <LeftBox>
+        <LeftBox href="">
           <h3>Meduim</h3>
         </LeftBox>
-        <RightBox><h3>Dev.to</h3></RightBox>
+        <RightBox href="">
+          <h3>Dev.to</h3>
+        </RightBox>
       </ArticleStyled>
     </ArticleWrapper>
   );
@@ -29,26 +31,44 @@ const ArticleStyled = styled.div`
   display: flex;
   height: 30vh;
   justify-content: space-between;
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    flex-direction: column;
+  }
 `;
 
-const LeftBox = styled.div`
+const LeftBox = styled.a`
   height: 100%;
   width: 100%;
   border: 1px solid #f2f2f2;
   display: flex;
-  align-items:center;
+  align-items: center;
   font-size: 2rem;
+  background-color: black;
+  color: white;
   justify-content: center;
+  transition: all 0.75s ease;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
 `;
 
-const RightBox = styled.div`
+const RightBox = styled.a`
   height: 100%;
   width: 100%;
   border: 1px solid #f2f2f2;
   display: flex;
   font-size: 2rem;
-  align-items:center;
+  align-items: center;
   justify-content: center;
+  transition: all 0.75s ease;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
 `;
 
 export default Articles;

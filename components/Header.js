@@ -59,11 +59,11 @@ const Hamburger = styled.div`
   transition: all .5s ease;
   &.active > ${FirstLine}{
     transform: translateY(5px) rotate(45deg);
-    background: red;
+    background: black;
   }
   &.active > ${SecondLine}{
     transform: translateY(-5px) rotate(-45deg);
-    background: red;
+    background: black;
   }
 `;
 

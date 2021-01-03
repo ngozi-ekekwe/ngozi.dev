@@ -7,6 +7,7 @@ import Introduction from "../components/Introduction";
 import Projects from "../components/Projects";
 import Experiences from "../components/Experience";
 import Articles from "../components/Articles";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
@@ -58,8 +59,10 @@ export default function Home() {
       <Projects />
       <Experiences />
       <Articles />
+      
       <Sidebar isActive={isActive} />
       <Cursor />
+      <Footer />
     </div>
   );
 }

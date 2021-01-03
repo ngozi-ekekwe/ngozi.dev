@@ -1,5 +1,5 @@
 import { projectsDirectory } from "../utils/projects";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 function Projects() {
   return (
@@ -18,6 +18,7 @@ function Projects() {
                 )}
                 <ProjectContent>
                   <ProjectHeader>{project.name}</ProjectHeader>
+                  <ShortDescription>{project.short}</ShortDescription>
                   <ProjectDescription>{project.description}</ProjectDescription>
                   <ProjectTagWrapper>
                     {project.tags &&
@@ -40,14 +41,23 @@ function Projects() {
 
 const ProjectsStyled = styled.section`
   width: 80%;
-  margin: 0rem auto;
+  margin: 2rem auto;
   margin-top: 200px;
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    width: 95%;
+  }
 `;
 
 const ProjectContent = styled.div`
   height: 100%;
   position: relative;
   padding: 1.5rem 2rem;
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    width: 95%;
+  }
+
 `;
 
 const ProjectImage = styled.img`
@@ -55,23 +65,55 @@ const ProjectImage = styled.img`
   width: auto;
 `;
 
+const Slide = keyframes`
+from {
+  transform: translateX(-100%);
+}
+to {
+  transform: translateX(0);
+}
+ `;
+
 const ProjectWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 4rem;
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    margin-top: 2rem;
+  }
 `;
 
 const ProjectHeader = styled.header`
   font-size: 2rem;
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    font-size: 1.5rem;
+  }
 `;
 
 const ProjectDescription = styled.p`
   line-height: 1.7;
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    display: none;
+  }
+`;
+
+const ShortDescription = styled.p`
+  display: none;
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+  display: block;
+  }
 `;
 
 const SectionTitle = styled.h3`
   font-size: 2rem;
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    font-size: 1.5rem;
+  }
 `;
 
 const Project = styled.div`
@@ -82,12 +124,28 @@ const Project = styled.div`
   margin-bottom: 3rem;
   height: 400px;
 
+  animation-name: ${Slide};
+  animation-duration: 0.75s;
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    width: 100%;
+    height: 250px;
+  }
+
   &.flex {
     width: 100%;
     display: flex;
     justify-content: space-between;
 
-    ${ProjectDescription} {
+    img {
+      
+      @media screen and (max-width: ${(props) => props.theme.tablet}) {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: ${(props) => props.theme.tablet}) {
+      flex-direction: column;
     }
   }
 `;
@@ -136,8 +194,6 @@ const ProjectLink = styled.a`
   position: relative;
   z-index: 1;
 
-
-
   &::after {
     background-image: linear-gradient(to right, #e3ffe7, #d9e7ff);
     bottom: 0;
@@ -155,7 +211,6 @@ const ProjectLink = styled.a`
 
   &:hover::after {
     transform: scaleY(2);
-    // background-image: linear-gradient(to right, #e3ffe7, #fa6400);
     background-color: red;
   }
 `;

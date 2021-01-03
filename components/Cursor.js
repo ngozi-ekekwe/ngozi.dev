@@ -34,9 +34,10 @@ function Cursor() {
 }
 
 const CursorStyled = styled.div`
-  width: 3rem;
-  height: 3rem;
-  border: 2px solid #fa6400;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #d9e7ff;
+  background: #d9e7ff;
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -46,12 +47,12 @@ const CursorStyled = styled.div`
   transform-origin: 75% 75%;
 
   &.nav-active {
-    background: #fa6400;
+    background: #d9e7ff;
     transform: scale(2);
   }
 
   &.profile-active {
-    background: #fa6400;
+    background: #e3ffe7;
     opacity: 0.8;
     transform: scale(5);
   }

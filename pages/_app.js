@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useDarkMode from "use-dark-mode";
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme } from "../theme";
+import { lightTheme, darkTheme, screenSizes } from "../theme";
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
@@ -12,8 +12,13 @@ function MyApp({ Component, pageProps }) {
     setIsMounted(true);
   }, []);
 
+  const customTheme = {
+    theme,
+    ...screenSizes
+  }
+
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={customTheme}>
       {isMounted && <Component {...pageProps} darkMode={darkMode} />}
     </ThemeProvider>
   );

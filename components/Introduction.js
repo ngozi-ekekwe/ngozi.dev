@@ -1,9 +1,9 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import React, { useEffect, useState } from "react";
 
 function Introduction() {
 
-  const [logoHeight, setLogoHeight] = useState(250);
+  const [logoHeight, setLogoHeight] = useState(200);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -15,7 +15,7 @@ function Introduction() {
   const handleScroll = () => {
     let scrollTop = window.scrollY,
       minHeight = 0,
-      logoHeight = Math.max(minHeight, 250 - scrollTop);
+      logoHeight = Math.max(minHeight, 200 - scrollTop);
     setLogoHeight(logoHeight);
 
   };
@@ -39,23 +39,46 @@ function Introduction() {
   );
 }
 
+const Slide = keyframes`
+from {
+  transform: translateX(-100%);
+}
+to {
+  transform: translateX(50%);
+}
+ `;
+
 const StyledIntroduction = styled.div`
   position: relative;
+  
   width: 100%;
   background-image: linear-gradient(to right, #e3ffe7, #d9e7ff);
   height: 55vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    padding: 3rem 0;
+    height: 100%;
+  }
 `;
 
 const Name = styled.h1`
   font-size: 3.5rem;
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    font-size: 1.5rem;
+  }
 `;
 
 const DescriptionWrapper = styled.div`
   width: 50%;
   margin: 0 auto;
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    width: 80%;
+  }
 `;
 
 const Role = styled.h2`
@@ -66,6 +89,10 @@ const Description = styled.p`
   text-align: center;
   font-size: 1.5rem;
   line-height: 2.17;
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    font-size: 1.1rem;
+  }
 `;
 
 const ProfileStyled = styled.div`
@@ -78,6 +105,13 @@ const ProfileStyled = styled.div`
   left: 50%;
   transform: translate(-50%, 0);
   margin-top: -100px;
+  animation-name: ${Slide};
+  animation-duration: .75s;
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    margin-top: -50px;
+    height: 150px;
+    width: 150px;
+  }
 `;
 
 const Avatar = styled.div`
@@ -88,6 +122,7 @@ const Avatar = styled.div`
   background-image: url("/avatar.jpg");
   background-position: center;
   background-size: cover;
+  
 `;
 
 export default Introduction;

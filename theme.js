@@ -21,3 +21,10 @@ export const darkTheme = {
   highlightOrange: "#fa6400",
   color: color.white,
 };
+
+export const screenSizes = {
+  tablet: "48em",
+  desktop: "em",
+  space: "1rem",
+  maxWidth: "1200px",
+};
