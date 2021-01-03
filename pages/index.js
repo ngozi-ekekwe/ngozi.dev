@@ -4,7 +4,8 @@ import Header from "../components/Header";
 import Cursor from "../components/Cursor";
 import Sidebar from "../components/Sidebar";
 import Introduction from "../components/Introduction";
-
+import Projects from "../components/Projects";
+import Experiences from "../components/Experience";
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
@@ -53,6 +54,8 @@ export default function Home() {
       </Head>
       <Header isActive={isActive} setIsActive={setIsActive} />
       <Introduction />
+      <Projects />
+      <Experiences />
       <Sidebar isActive={isActive} />
       <Cursor />
     </div>

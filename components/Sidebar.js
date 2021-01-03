@@ -2,7 +2,20 @@ import styled from "styled-components";
 
 function Sidebar({ isActive }) {
   return (
-    <SidebarStyled className={isActive ? 'active': ''}></SidebarStyled>
+    <SidebarStyled className={isActive ? 'active': ''}>
+      <ul class="nav-links">
+        <h3>Twitter</h3>
+        <h3>Youtube</h3>
+        <h3>Instragram</h3>
+      </ul>
+      <div class="contact">
+        <h2>Stay in touch.</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dolorem
+          praesentium ea amet error quidem natus. Magnam explicabo sed tenetur?
+        </p>
+      </div>
+    </SidebarStyled>
   );
 }
 
@@ -12,7 +25,7 @@ const SidebarStyled = styled.nav`
   left: 0;
   width: 100%;
   height: 100%;
-  background: black;
+  background: white;
   display: flex;
   justify-content: space-around;
   align-items: center;

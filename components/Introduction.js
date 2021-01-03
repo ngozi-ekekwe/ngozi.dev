@@ -5,7 +5,7 @@ function Introduction() {
   return (
     <div>
       <StyledIntroduction>
-        <Name>Ngozi Ekekwe</Name>
+        <Name>Hello World!</Name>
         <DescriptionWrapper>
           <Description>
             I’m a Front-End Developer working on Account Switch Kit, a solution
@@ -24,7 +24,7 @@ const StyledIntroduction = styled.div`
   position: relative;
   width: 100%;
   background-image: linear-gradient(to right, #e3ffe7, #d9e7ff);
-  height: 55vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;

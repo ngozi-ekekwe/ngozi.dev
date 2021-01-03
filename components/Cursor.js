@@ -36,7 +36,7 @@ function Cursor() {
 const CursorStyled = styled.div`
   width: 3rem;
   height: 3rem;
-  border: 2px solid black;
+  border: 2px solid #fa6400;
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -46,12 +46,12 @@ const CursorStyled = styled.div`
   transform-origin: 75% 75%;
 
   &.nav-active {
-    background: rgb(86, 124, 228);
+    background: #fa6400;
     transform: scale(2);
   }
 
   &.profile-active {
-    background: rgb(86, 124, 228);
+    background: #fa6400;
     opacity: 0.8;
     transform: scale(5);
   }

@@ -10,7 +10,6 @@ function Profile() {
 
 const ProfileStyled = styled.div`
   height: 200px;
-  border: 1px solid red;
   width: 200px;
   border-radius: 50%;
   position: absolute;
@@ -25,7 +24,7 @@ const Avatar = styled.div`
   height: 100%;
   border-radius: 50%;
   z-index: 2;
-  background-image: url("/avatar.png");
+  background-image: url("/avatar.jpg");
   background-position: center;
   background-size: cover;
 `;
