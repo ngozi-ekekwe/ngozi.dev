@@ -7,7 +7,7 @@ function Header({ setIsActive, isActive}) {
   return (
     <StyledHeader>
       <Nav>
-        <Logo href="/" id="logo">ngozi-ekekwe</Logo>
+        <Logo href="/" id="logo">ng</Logo>
         <Hamburger id="hamburger" onClick={toggleMenu} className={isActive ? 'active': ''}>
           <FirstLine></FirstLine>
           <SecondLine></SecondLine>

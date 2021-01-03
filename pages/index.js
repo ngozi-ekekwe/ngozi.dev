@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import Cursor from "../components/Cursor";
 import Sidebar from "../components/Sidebar";
+import Introduction from "../components/Introduction";
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
@@ -50,6 +51,7 @@ export default function Home() {
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </Head>
       <Header isActive={isActive} setIsActive={setIsActive} />
+      <Introduction />
       <Sidebar isActive={isActive} />
       <Cursor />
     </div>
