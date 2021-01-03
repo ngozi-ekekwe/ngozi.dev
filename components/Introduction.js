@@ -1,22 +1,28 @@
 import styled from "styled-components";
+import Profile from "./Profile";
 
 function Introduction() {
   return (
-    <StyledIntroduction>
-      <Name>Ngozi Ekekwe</Name>
-      <DescriptionWrapper>
-        <Description>
-          I’m a Front-End Developer working on Account Switch Kit, a solution
-          that provides a fully digital workflow that allows users to switch
-          their bank accounts and portfolios from one bank to another within
-          minutes at Finleap Connect
-        </Description>
-      </DescriptionWrapper>
-    </StyledIntroduction>
+    <div>
+      <StyledIntroduction>
+        <Name>Ngozi Ekekwe</Name>
+        <DescriptionWrapper>
+          <Description>
+            I’m a Front-End Developer working on Account Switch Kit, a solution
+            that provides a fully digital workflow that allows users to switch
+            their bank accounts and portfolios from one bank to another within
+            minutes at Finleap Connect
+          </Description>
+        </DescriptionWrapper>
+      </StyledIntroduction>
+      <Profile />
+    </div>
   );
 }
 
 const StyledIntroduction = styled.div`
+  position: relative;
+  width: 100%;
   background-image: linear-gradient(to right, #e3ffe7, #d9e7ff);
   height: 55vh;
   display: flex;

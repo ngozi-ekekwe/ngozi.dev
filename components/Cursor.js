@@ -18,7 +18,7 @@ function Cursor() {
     if(item.id === 'logo' || item.id === 'hamburger') {
       mouse.current.classList.add("nav-active");
     }else {
-      mouse.current.classList.remove("nav-active");
+      mouse && mouse.current.classList.remove("nav-active");
     }
   };
   return (

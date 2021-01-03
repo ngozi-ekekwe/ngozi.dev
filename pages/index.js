@@ -5,6 +5,7 @@ import Cursor from "../components/Cursor";
 import Sidebar from "../components/Sidebar";
 import Introduction from "../components/Introduction";
 
+
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
   return (
