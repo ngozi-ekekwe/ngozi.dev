@@ -4,8 +4,6 @@ import { experienceDirectory } from "../utils/experiences";
 
 function Experiences() {
   const workExperience = experienceDirectory;
-  const lengthOfExperiences = workExperience.length;
-
   const [carouselIndex, setCarouselIndex] = useState(0);
 
   return (
