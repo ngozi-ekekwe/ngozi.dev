@@ -20,6 +20,11 @@ function Cursor() {
     }else {
       mouse && mouse.current.classList.remove("nav-active");
     }
+    if(item.id === 'profile') {
+      mouse.current.classList.add("profile-active");
+    }else {
+      mouse && mouse.current.classList.remove("profile-active");
+    }
   };
   return (
     <CursorStyled className="cursor" ref={mouse}>
@@ -43,6 +48,12 @@ const CursorStyled = styled.div`
   &.nav-active {
     background: rgb(86, 124, 228);
     transform: scale(2);
+  }
+
+  &.profile-active {
+    background: rgb(86, 124, 228);
+    opacity: 0.8;
+    transform: scale(5);
   }
 `;
 
