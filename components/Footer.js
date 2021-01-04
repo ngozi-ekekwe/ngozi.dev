@@ -20,7 +20,7 @@ const FooterStyled = styled.footer`
   padding: 1rem 0;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to right, #e3ffe7, #d9e7ff);
+  background-image: ${(props) => props.theme.defaultColor};
 
   & > div {
     display: flex;

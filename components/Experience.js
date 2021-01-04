@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { experienceDirectory } from "../utils/experiences";
 
-function Experiences() {
+function Experiences(props) {
   const workExperience = experienceDirectory;
   const [carouselIndex, setCarouselIndex] = useState(0);
-
   return (
     <ExperiencesStyled>
       <ExperienceWrapper>
@@ -46,7 +45,7 @@ function Experiences() {
 const ExperiencesStyled = styled.section`
   width: 100%;
   margin: 3rem 0;
-  background-image: linear-gradient(to right, #e3ffe7, #d9e7ff);
+  background-image: ${(props) => props.theme.defaultColor}
 `;
 
 const ExperienceWrapper = styled.section`

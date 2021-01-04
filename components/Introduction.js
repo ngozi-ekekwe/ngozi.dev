@@ -50,7 +50,7 @@ const StyledIntroduction = styled.div`
   position: relative;
 
   width: 100%;
-  background-image: linear-gradient(to right, #e3ffe7, #d9e7ff);
+  background-image: ${(props) => props.theme.defaultColor};
   height: 55vh;
   display: flex;
   flex-direction: column;
@@ -64,6 +64,7 @@ const StyledIntroduction = styled.div`
 
 const Name = styled.h1`
   font-size: 3.5rem;
+  color: ${(props) => props.theme.bodyColor};
   position: relative;
   z-index: 1;
 
@@ -101,6 +102,7 @@ const Role = styled.h2`
 
 const Description = styled.p`
   text-align: center;
+  color: ${(props) => props.theme.bodyColor};
   font-size: 1.5rem;
   line-height: 2.17;
 

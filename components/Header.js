@@ -1,27 +1,44 @@
 import styled from "styled-components";
+import ThemeSelector from "./ThemeSelector";
 
-function Header({ setIsActive, isActive}) {
+function Header({ setIsActive, isActive, setCurrentTheme }) {
   const toggleMenu = () => {
-    setIsActive(!isActive)
-  }
+    setIsActive(!isActive);
+  };
   return (
-    <StyledHeader>
-      <Nav>
-        <Logo href="/" id="logo">ng.me</Logo>
-        <Hamburger id="hamburger" onClick={toggleMenu} className={isActive ? 'active': ''}>
-          <FirstLine></FirstLine>
-          <SecondLine></SecondLine>
-        </Hamburger>
-      </Nav>
-    </StyledHeader>
+    <HeaderWrapper>
+      <ThemeSelector setCurrentTheme={setCurrentTheme}></ThemeSelector>
+      <StyledHeader>
+        <Nav>
+          <Logo href="/" id="logo">
+            ng.me
+          </Logo>
+          <Hamburger
+            id="hamburger"
+            onClick={toggleMenu}
+            className={isActive ? "active" : ""}
+          >
+            <FirstLine></FirstLine>
+            <SecondLine></SecondLine>
+          </Hamburger>
+        </Nav>
+      </StyledHeader>
+    </HeaderWrapper>
   );
 }
 
-const StyledHeader = styled.header`
+const HeaderWrapper = styled.header`
+  width: 100%;
+  position: relative;
+  background-color: ${(props) => props.theme.headerBackgroundColor};
+  z-index: 2;
+`;
+
+const StyledHeader = styled.div`
   width: 80%;
   position: relative;
   z-index: 2;
-  min-height: 10vh;
+  min-height: 8vh;
   display: flex;
   align-items: center;
   margin: auto;
@@ -36,13 +53,14 @@ const Nav = styled.nav`
 
 const Logo = styled.a`
   font-size: 2rem;
+  color: ${(props) => props.theme.headerTextColor};
 `;
 
 const FirstLine = styled.div`
   width: 2rem;
   height: 0.2rem;
   margin: 0.4rem;
-  background: black;
+  background: ${(props) => props.theme.headerTextColor};
   pointer-events: none;
 `;
 
@@ -50,20 +68,20 @@ const SecondLine = styled.div`
   width: 2rem;
   height: 0.2rem;
   margin: 0.4rem;
-  background: black;
+  background: ${(props) => props.theme.headerTextColor};
   pointer-events: none;
 `;
 
 const Hamburger = styled.div`
   cursor: pointer;
-  transition: all .5s ease;
-  &.active > ${FirstLine}{
+  transition: all 0.5s ease;
+  &.active > ${FirstLine} {
     transform: translateY(5px) rotate(45deg);
-    background: black;
+    background: ${(props) => props.theme.headerTextColor};
   }
-  &.active > ${SecondLine}{
+  &.active > ${SecondLine} {
     transform: translateY(-5px) rotate(-45deg);
-    background: black;
+    background: ${(props) => props.theme.headerTextColor};
   }
 `;
 

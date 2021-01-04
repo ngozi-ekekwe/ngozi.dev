@@ -1,25 +1,27 @@
 import React, { useState, useEffect } from "react";
-import useDarkMode from "use-dark-mode";
+import CreateGlobalStyle from '../utils/globalStyles';
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, screenSizes } from "../theme";
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   const [isMounted, setIsMounted] = useState(false);
-  const darkMode = useDarkMode(true);
-  const theme = darkMode.value ? darkTheme : lightTheme;
+  const [ currentTheme, setCurrentTheme ] = useState('light');
+  const theme = (currentTheme === 'light') ? lightTheme : darkTheme;
+
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
   const customTheme = {
-    theme,
+    ...theme,
     ...screenSizes
   }
 
   return (
     <ThemeProvider theme={customTheme}>
-      {isMounted && <Component {...pageProps} darkMode={darkMode} />}
+      <CreateGlobalStyle />
+      {isMounted && <Component {...pageProps} currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />}
     </ThemeProvider>
   );
 }

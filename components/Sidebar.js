@@ -38,7 +38,8 @@ const SidebarStyled = styled.nav`
   left: 0;
   width: 100%;
   height: 100vh;
-  background: white;
+  background-image: ${(props) => props.theme.defaultColor};
+  color: ${(props) => props.theme.bodyColor};
   display: flex;
   justify-content: space-around;
   flex-direction: column;
