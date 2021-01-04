@@ -45,7 +45,7 @@ function Experiences(props) {
 const ExperiencesStyled = styled.section`
   width: 100%;
   margin: 3rem 0;
-  background-image: ${(props) => props.theme.defaultColor}
+  background-image: ${(props) => props.theme.defaultColor};
 `;
 
 const ExperienceWrapper = styled.section`
@@ -70,7 +70,8 @@ const ExperienceLayout = styled.div`
 const SingleExperience = styled.div`
   width: 0%;
   height: 300px;
-  background-color: #fafafa;
+  background-color: ${(props) => props.theme.experienceCard};
+  border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 5px;
   display: flex;
   justify-content: center;

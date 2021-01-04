@@ -11,7 +11,7 @@ export const color = {
 export const lightTheme = {
   themeSelectorBackgroundColor: color.lightGray,
   themeSelectorLeftTextColor: '#414143',
-  themeSelectoRightTextColor: color.white,
+  experienceCard: color.backgroundLight,
 
   bodyBackground: color.lightGray,
   bodyTextColor: color.black,
@@ -35,6 +35,8 @@ export const darkTheme = {
   themeSelectorRightBackgroundColor: color.backgroundDark,
   themeSelectorLeftTextColor: color.white,
   themeSelectoRightTextColor: color.white,
+
+  experienceCard: color.backgroundDark,
 
 
   headerBackgroundColor: "#161c23",

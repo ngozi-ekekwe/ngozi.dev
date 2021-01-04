@@ -6,7 +6,6 @@ function Header({ setIsActive, isActive }) {
   };
   return (
     <HeaderWrapper>
-      
       <StyledHeader>
         <Nav>
           <Logo href="/" id="logo">
@@ -35,8 +34,6 @@ const HeaderWrapper = styled.header`
 
 const StyledHeader = styled.div`
   width: 80%;
-  position: relative;
-  z-index: 2;
   min-height: 6vh; 
   display: flex;
   align-items: center;

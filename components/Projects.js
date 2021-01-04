@@ -54,7 +54,7 @@ const ProjectContent = styled.div`
   height: 100%;
   position: relative;
   padding: 1.5rem 2rem;
-  background-color: transparent;
+  background-color: ${(props) => props.theme.bodyBackgroundColor};
   color: ${(props) => props.theme.bodyTextColor};
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
@@ -122,7 +122,7 @@ const Project = styled.div`
   width: calc((100% - (10px * 2)) / 2);
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  background: #fbfbfd;
+  background-color: ${(props) => props.theme.bodyBackgroundColor};;
   margin-bottom: 3rem;
   height: 400px;
 
