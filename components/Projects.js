@@ -59,6 +59,7 @@ const ProjectContent = styled.div`
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     width: 95%;
+    padding: 1.5rem 1rem;
   }
 `;
 

@@ -1,12 +1,14 @@
 import styled from "styled-components";
 import ThemeSelector from "./ThemeSelector";
 
-
 function Sidebar({ isActive, setCurrentTheme, currentTheme }) {
   return (
     <SidebarStyled className={isActive ? "active" : ""}>
       <Wrapper>
-      <ThemeSelector setCurrentTheme={setCurrentTheme} currentTheme={currentTheme}></ThemeSelector>
+        <ThemeSelector
+          setCurrentTheme={setCurrentTheme}
+          currentTheme={currentTheme}
+        ></ThemeSelector>
         <Header>Hello there!, thank you for visiting my porftfolio</Header>
 
         <Contact>
@@ -17,6 +19,9 @@ function Sidebar({ isActive, setCurrentTheme, currentTheme }) {
           <button>Say Hello 👋🏼</button>
         </Contact>
         <ul class="nav-links">
+          <li>
+            <a href="">Github</a>
+          </li>
           <li>
             <a href="">Twitter</a>
           </li>
@@ -64,7 +69,7 @@ const Header = styled.h1`
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     font-size: 1rem;
   }
-`
+`;
 
 const Wrapper = styled.div`
   width: 100%;
@@ -103,7 +108,7 @@ const Wrapper = styled.div`
 `;
 
 const Contact = styled.div`
-text-align: center;
+  text-align: center;
 
   button {
     background-color: #fa6400;
