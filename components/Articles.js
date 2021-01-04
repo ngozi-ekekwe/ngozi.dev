@@ -49,6 +49,10 @@ const LeftBox = styled.a`
   justify-content: center;
   transition: all 0.75s ease;
 
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    font-size: 1.5rem;
+  }
+
   &:hover {
     background-color: white;
     color: black;
@@ -66,6 +70,10 @@ const RightBox = styled.a`
   align-items: center;
   justify-content: center;
   transition: all 0.75s ease;
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    font-size: 1.5rem;
+  }
 
   &:hover {
     background-color: white;

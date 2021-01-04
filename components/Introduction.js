@@ -2,7 +2,6 @@ import styled, { keyframes } from "styled-components";
 import React, { useEffect, useState } from "react";
 
 function Introduction() {
-
   const [logoHeight, setLogoHeight] = useState(200);
 
   useEffect(() => {
@@ -17,7 +16,6 @@ function Introduction() {
       minHeight = 0,
       logoHeight = Math.max(minHeight, 200 - scrollTop);
     setLogoHeight(logoHeight);
-
   };
   return (
     <div>
@@ -50,7 +48,7 @@ to {
 
 const StyledIntroduction = styled.div`
   position: relative;
-  
+
   width: 100%;
   background-image: linear-gradient(to right, #e3ffe7, #d9e7ff);
   height: 55vh;
@@ -66,6 +64,22 @@ const StyledIntroduction = styled.div`
 
 const Name = styled.h1`
   font-size: 3.5rem;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    background-color: #fa6400;
+    bottom: 0;
+    content: " ";
+    display: block;
+    height: 50%;
+    left: 7px;
+    opacity: 0.5;
+    position: absolute;
+    transition: all 0.15s ease-in-out;
+    width: calc(100%);
+    z-index: -1;
+  }
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     font-size: 1.5rem;
@@ -98,7 +112,7 @@ const Description = styled.p`
 const ProfileStyled = styled.div`
   height: ${(props) => props.height}px;
   width: ${(props) => props.height}px;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   border-radius: 50%;
   position: absolute;
   display: flex;
@@ -106,7 +120,7 @@ const ProfileStyled = styled.div`
   transform: translate(-50%, 0);
   margin-top: -100px;
   animation-name: ${Slide};
-  animation-duration: .75s;
+  animation-duration: 0.75s;
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     margin-top: -50px;
     height: 150px;
@@ -118,11 +132,11 @@ const Avatar = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  border: 3px solid #fa6400;
   z-index: 2;
-  background-image: url("/avatar.jpg");
-  background-position: center;
+  background-image: url("/avatar3.jpg");
+  background-position: top;
   background-size: cover;
-  
 `;
 
 export default Introduction;

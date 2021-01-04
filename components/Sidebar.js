@@ -16,6 +16,7 @@ function Sidebar({ isActive }) {
           <p>
             Got a question or proposal, or just want to say hello? Go ahead.
           </p>
+          <button>Say Hello 👋🏼</button>
         </Contact>
       </Wrapper>
     </SidebarStyled>
@@ -68,6 +69,14 @@ const Wrapper = styled.div`
 `;
 
 const Contact = styled.div`
+  button {
+    background-color: #fa6400;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: .5rem 1.5rem;
+  }
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     text-align: center;
   }

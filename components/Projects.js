@@ -124,6 +124,10 @@ const Project = styled.div`
   margin-bottom: 3rem;
   height: 400px;
 
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    margin-bottom: 1rem;
+  }
+
   animation-name: ${Slide};
   animation-duration: 0.75s;
 
@@ -186,6 +190,10 @@ const ProjectFooter = styled.footer`
   position: absolute;
   bottom: 2.5rem;
   width: 100%;
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    bottom: 1rem;
+  }
 `;
 
 const ProjectLink = styled.a`
