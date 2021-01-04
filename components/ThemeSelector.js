@@ -20,24 +20,24 @@ function ThemeSelector({ setCurrentTheme, currentTheme }) {
 const ThemeSelectorStyled = styled.section`
   min-height: 4vh;
   width: 100%;
+  margin-bottom: 1rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.theme.themeSelectorBackgroundColor};
   color: white;
 `;
 
 const ToggleWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   width: 80%;
   margin: 0 auto;
 `;
 
 const Label = styled.label`
   display: inline-block;
-  height: 30px;
+  height: 34px;
   position: relative;
   width: 60px;
 `;
@@ -51,27 +51,22 @@ const Slider = styled.div`
   position: absolute;
   right: 0;
   top: 0;
-  
   transition: 0.4s;
-
-  @media screen and (max-width: ${(props) => props.theme.tablet}) {
-    height: 1.5rem;
-  }
 
   &:before {
     background-color: #fff;
     bottom: 4px;
     content: "";
-    height: 20px;
+    height: 26px;
     left: 4px;
     position: absolute;
     transition: 0.4s;
-    width: 20px;
+    width: 26px;
 
-    @media screen and (max-width: ${(props) => props.theme.tablet}) {
-      height: 15px;
-      width: 15px;
-    }
+    // @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    //   height: 15px;
+    //   width: 15px;
+    // }
   }
 
   &.round {

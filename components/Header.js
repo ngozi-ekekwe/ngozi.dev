@@ -1,13 +1,12 @@
 import styled from "styled-components";
-import ThemeSelector from "./ThemeSelector";
 
-function Header({ setIsActive, isActive, setCurrentTheme, currentTheme }) {
+function Header({ setIsActive, isActive }) {
   const toggleMenu = () => {
     setIsActive(!isActive);
   };
   return (
     <HeaderWrapper>
-      <ThemeSelector setCurrentTheme={setCurrentTheme} currentTheme={currentTheme}></ThemeSelector>
+      
       <StyledHeader>
         <Nav>
           <Logo href="/" id="logo">
