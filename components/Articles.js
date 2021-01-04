@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 function Articles() {
   return (
-    <ArticleWrapper>
+    <ArticleDiv>
+      <ArticleWrapper>
       <SectionTitle>Journal</SectionTitle>
       <ArticleStyled>
         <LeftBox href="">
@@ -13,10 +14,14 @@ function Articles() {
         </RightBox>
       </ArticleStyled>
     </ArticleWrapper>
+    </ArticleDiv>
   );
 }
 
-const ArticleWrapper = styled.section`
+const ArticleDiv = styled.section`
+  background-color: ${(props) => props.theme.headerBackgroundColor};
+`
+const ArticleWrapper = styled.div`
   min-height: 50vh;
   width: 80%;
   margin: auto;
@@ -40,7 +45,7 @@ const ArticleStyled = styled.div`
 const LeftBox = styled.a`
   height: 100%;
   width: 100%;
-  border: 1px solid #f2f2f2;
+  border: 1px solid lavenderblush;
   display: flex;
   align-items: center;
   background-color: black;
@@ -62,7 +67,7 @@ const LeftBox = styled.a`
 const RightBox = styled.a`
   height: 100%;
   width: 100%;
-  border: 1px solid #f2f2f2;
+  border: 1px solid lavenderblush;
   display: flex;
   font-size: 2rem;
   background-color: black;

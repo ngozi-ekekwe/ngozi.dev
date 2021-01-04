@@ -71,7 +71,7 @@ const SingleExperience = styled.div`
   width: 0%;
   height: 300px;
   background-color: ${(props) => props.theme.experienceCard};
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid lavenderblush;
   border-radius: 5px;
   display: flex;
   justify-content: center;

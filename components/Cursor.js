@@ -20,11 +20,11 @@ function Cursor() {
     }else {
       mouse && mouse.current.classList.remove("nav-active");
     }
-    if(item.id === 'profile') {
-      mouse.current.classList.add("profile-active");
-    }else {
-      mouse && mouse.current.classList.remove("profile-active");
-    }
+    // if(item.id === 'profile') {
+    //   mouse.current.classList.add("profile-active");
+    // }else {
+    //   mouse && mouse.current.classList.remove("profile-active");
+    // }
   };
   return (
     <CursorStyled className="cursor" ref={mouse}>

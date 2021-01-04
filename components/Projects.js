@@ -3,7 +3,8 @@ import styled, { keyframes } from "styled-components";
 
 function Projects() {
   return (
-    <ProjectsStyled>
+    <ProjectDiv>
+      <ProjectsStyled>
       <SectionTitle>Selected Projects</SectionTitle>
       <ProjectWrapper>
         {projectsDirectory &&
@@ -27,8 +28,8 @@ function Projects() {
                       })}
                   </ProjectTagWrapper>
                   <ProjectFooter>
-                    <ProjectLink>Source Code</ProjectLink>
-                    <ProjectLink>Live site</ProjectLink>
+                    <ProjectLink href="">Source Code</ProjectLink>
+                    <ProjectLink href="">Live site</ProjectLink>
                   </ProjectFooter>
                 </ProjectContent>
               </Project>
@@ -36,17 +37,22 @@ function Projects() {
           })}
       </ProjectWrapper>
     </ProjectsStyled>
+    </ProjectDiv>
   );
 }
 
+const ProjectDiv = styled.section`
+  width: 100%;
+  background-color: ${(props) => props.theme.headerBackgroundColor};
+`;
 
 const ProjectsStyled = styled.div`
   width: 80%;
-  margin: 2rem auto;
-  margin-top: 200px;
+  margin: 0rem auto;
+  padding-top: 150px;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
-    margin-top: 150px;
+    padding-top: 150px;
   }
 `;
 
@@ -54,6 +60,8 @@ const ProjectContent = styled.div`
   height: 100%;
   position: relative;
   padding: 1.5rem 2rem;
+  border-radius: 5px;
+  border: 1px solid lavenderblush;
   background-color: ${(props) => props.theme.bodyBackgroundColor};
   color: ${(props) => props.theme.bodyTextColor};
 
@@ -145,6 +153,7 @@ const Project = styled.div`
     justify-content: space-between;
 
     img {
+      object-fit: cover;
       @media screen and (max-width: ${(props) => props.theme.tablet}) {
         display: none;
       }
@@ -205,7 +214,7 @@ const ProjectLink = styled.a`
   z-index: 1;
 
   &::after {
-    background-image: linear-gradient(to right, #e3ffe7, #d9e7ff);
+    background-image: ${(props) => props.theme.defaultColor};
     bottom: 0;
     content: " ";
     display: block;
@@ -221,7 +230,7 @@ const ProjectLink = styled.a`
 
   &:hover::after {
     transform: scaleY(2);
-    background-color: red;
+    background-color: #fa6400;
   }
 `;
 

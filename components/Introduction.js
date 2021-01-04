@@ -1,8 +1,9 @@
 import styled, { keyframes } from "styled-components";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function Introduction() {
-  const [logoHeight, setLogoHeight] = useState(200);
+  const [logoHeight, setLogoHeight] = useState(250);
+  const profileRef = useRef(null);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -14,7 +15,13 @@ function Introduction() {
   const handleScroll = () => {
     let scrollTop = window.scrollY,
       minHeight = 0,
-      logoHeight = Math.max(minHeight, 200 - scrollTop);
+      logoHeight = Math.max(minHeight, 250 - scrollTop);
+    if(logoHeight === 0) {
+      profileRef.current.style.border = 'none';
+    }
+    else {
+      profileRef.current.style.border = "3px solid #fa6400";
+    }
     setLogoHeight(logoHeight);
   };
   return (
@@ -31,7 +38,7 @@ function Introduction() {
         </DescriptionWrapper>
       </StyledIntroduction>
       <ProfileStyled height={logoHeight}>
-        <Avatar id="profile"></Avatar>
+        <Avatar id="profile" ref={profileRef}></Avatar>
       </ProfileStyled>
     </div>
   );
@@ -46,12 +53,21 @@ to {
 }
  `;
 
+const Linear = keyframes`
+ from {
+   height: 0;
+ }
+ to {
+   height: 50%;
+ }
+  `;
+
 const StyledIntroduction = styled.div`
   position: relative;
 
   width: 100%;
   background-image: ${(props) => props.theme.defaultColor};
-  height: 55vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,12 +89,14 @@ const Name = styled.h1`
     bottom: 0;
     content: " ";
     display: block;
+    transition: 2s linear height;
     height: 50%;
     left: 7px;
     opacity: 0.5;
     position: absolute;
-    transition: all 0.15s ease-in-out;
     width: calc(100%);
+    animation-name: ${Linear};
+    animation-duration: .75s;
     z-index: -1;
   }
 
@@ -114,15 +132,13 @@ const Description = styled.p`
 const ProfileStyled = styled.div`
   height: ${(props) => props.height}px;
   width: ${(props) => props.height}px;
-  transition: all 0.5s ease;
+  transition: all 0.75s ease;
   border-radius: 50%;
   position: absolute;
   display: flex;
   left: 50%;
   transform: translate(-50%, 0);
   margin-top: -100px;
-  animation-name: ${Scale};
-  animation-duration: 0.75s;
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     margin-top: -50px;
     height: 150px;
