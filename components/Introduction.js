@@ -64,10 +64,9 @@ const Linear = keyframes`
 
 const StyledIntroduction = styled.div`
   position: relative;
-
   width: 100%;
   background-image: ${(props) => props.theme.defaultColor};
-  height: 70vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
