@@ -45,7 +45,7 @@ const ProjectsStyled = styled.section`
   margin-top: 200px;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
-    width: 95%;
+    margin-top: 150px;
   }
 `;
 

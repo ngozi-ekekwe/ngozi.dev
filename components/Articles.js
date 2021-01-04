@@ -43,9 +43,9 @@ const LeftBox = styled.a`
   border: 1px solid #f2f2f2;
   display: flex;
   align-items: center;
-  font-size: 2rem;
   background-color: black;
   color: white;
+  font-size: 2rem;
   justify-content: center;
   transition: all 0.75s ease;
 
@@ -61,13 +61,15 @@ const RightBox = styled.a`
   border: 1px solid #f2f2f2;
   display: flex;
   font-size: 2rem;
+  background-color: black;
+  color: white;
   align-items: center;
   justify-content: center;
   transition: all 0.75s ease;
 
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
   }
 `;
 
