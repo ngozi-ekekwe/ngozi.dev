@@ -3,14 +3,9 @@ import styled from "styled-components";
 function Sidebar({ isActive }) {
   return (
     <SidebarStyled className={isActive ? "active" : ""}>
-      {/* <ToggleTheme>Toggle Theme</ToggleTheme> */}
       <Wrapper>
-        <ul class="nav-links">
-          <h3>Twitter</h3>
-          <h3>Youtube</h3>
-          <h3>LinkedIn</h3>
-          <h3>Instagram</h3>
-        </ul>
+        <Header>Hello there!, thank you for visiting my porftfolio</Header>
+
         <Contact>
           <h2>Send me a message!</h2>
           <p>
@@ -18,6 +13,20 @@ function Sidebar({ isActive }) {
           </p>
           <button>Say Hello 👋🏼</button>
         </Contact>
+        <ul class="nav-links">
+          <li>
+            <a href="">Twitter</a>
+          </li>
+          <li>
+            <a href="">Youtube</a>
+          </li>
+          <li>
+            <a href="">LinkedIn</a>
+          </li>
+          <li>
+            <a href="">Instagram</a>
+          </li>
+        </ul>
       </Wrapper>
     </SidebarStyled>
   );
@@ -28,7 +37,7 @@ const SidebarStyled = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: white;
   display: flex;
   justify-content: space-around;
@@ -45,19 +54,40 @@ const SidebarStyled = styled.nav`
   }
 `;
 
-const ToggleTheme = styled.button`
-  cursor: pointer;
-`;
+const Header = styled.h1`
+  font-size: 2rem;
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    font-size: 1rem;
+  }
+`
 
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 
   ul {
     padding: 0;
+    margin: 1.5rem 0;
+    display: flex;
+
+    @media screen and (max-width: ${(props) => props.theme.tablet}) {
+      flex-direction: column;
+    }
+
+    li {
+      list-style: none;
+      font-size: 1.2rem;
+      padding-right: 2rem;
+
+      @media screen and (max-width: ${(props) => props.theme.tablet}) {
+        margin-bottom: 1rem;
+      }
+    }
   }
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
@@ -69,13 +99,15 @@ const Wrapper = styled.div`
 `;
 
 const Contact = styled.div`
+text-align: center;
+
   button {
     background-color: #fa6400;
     border: none;
     color: white;
     font-size: 1.2rem;
     border-radius: 5px;
-    padding: .5rem 1.5rem;
+    padding: 0.5rem 1.5rem;
   }
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     text-align: center;

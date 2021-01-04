@@ -20,7 +20,7 @@ function Introduction() {
   return (
     <div>
       <StyledIntroduction>
-        <Name>Hello World!</Name>
+        <Name>Ngozi Ekekwe</Name>
         <DescriptionWrapper>
           <Description>
             I’m a Front-End Developer working on Account Switch Kit, a solution
@@ -37,12 +37,12 @@ function Introduction() {
   );
 }
 
-const Slide = keyframes`
+const Scale = keyframes`
 from {
-  transform: translateX(-100%);
+  transform: scale(0);
 }
 to {
-  transform: translateX(50%);
+  transform: scale(1);
 }
  `;
 
@@ -119,7 +119,7 @@ const ProfileStyled = styled.div`
   left: 50%;
   transform: translate(-50%, 0);
   margin-top: -100px;
-  animation-name: ${Slide};
+  animation-name: ${Scale};
   animation-duration: 0.75s;
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     margin-top: -50px;
