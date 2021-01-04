@@ -72,8 +72,7 @@ const StyledIntroduction = styled.div`
   align-items: center;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
-    padding: 3rem 0;
-    height: 100%;
+    padding: 5rem 0 3rem;
   }
 `;
 
