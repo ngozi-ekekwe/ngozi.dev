@@ -39,9 +39,6 @@ function Projects() {
   );
 }
 
-const Wrapper = styled.section`
-  background-color: 'red';
-`;
 
 const ProjectsStyled = styled.div`
   width: 80%;
@@ -57,6 +54,8 @@ const ProjectContent = styled.div`
   height: 100%;
   position: relative;
   padding: 1.5rem 2rem;
+  background-color: transparent;
+  color: ${(props) => props.theme.bodyTextColor};
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     width: 95%;

@@ -9,7 +9,7 @@ import Experiences from "../components/Experience";
 import Articles from "../components/Articles";
 import Footer from "../components/Footer";
 
-export default function Home({ setCurrentTheme}) {
+export default function Home({ setCurrentTheme, currentTheme}) {
   const [isActive, setIsActive] = useState(false);
   return (
     <div>
@@ -54,7 +54,7 @@ export default function Home({ setCurrentTheme}) {
         {/* facebook */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </Head>
-      <Header isActive={isActive} setIsActive={setIsActive} setCurrentTheme={setCurrentTheme} />
+      <Header isActive={isActive} setIsActive={setIsActive} setCurrentTheme={setCurrentTheme} currentTheme={currentTheme} />
       <Introduction />
       <Projects />
       <Experiences />

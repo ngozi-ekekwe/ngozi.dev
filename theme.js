@@ -5,19 +5,15 @@ export const color = {
   defaultLightColor: "linear-gradient(to right, #e3ffe7, #d9e7ff)",
   white: "#C9D1D9",
   black: "#24292E",
-  lightGray: "#fafafa",
-  red: 'red',
-
-
+  lightGray: "#fafafa"
 };
 
 export const lightTheme = {
-  themeSelectorLeftBackgroundColor: color.lightGray,
-  themeSelectorRightBackgroundColor: color.backgroundDark,
+  themeSelectorBackgroundColor: color.lightGray,
   themeSelectorLeftTextColor: '#414143',
   themeSelectoRightTextColor: color.white,
-  
-  bodyBackground: color.backgroundLight,
+
+  bodyBackground: color.lightGray,
   bodyTextColor: color.black,
 
   headerBackgroundColor: color.backgroundLight,
@@ -33,7 +29,9 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
-  themeSelectorLeftBackgroundColor: color.backgroundDark,
+  themeSelectorBackgroundColor: color.backgroundDark,
+
+
   themeSelectorRightBackgroundColor: color.backgroundDark,
   themeSelectorLeftTextColor: color.white,
   themeSelectoRightTextColor: color.white,

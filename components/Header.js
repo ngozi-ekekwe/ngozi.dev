@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import ThemeSelector from "./ThemeSelector";
 
-function Header({ setIsActive, isActive, setCurrentTheme }) {
+function Header({ setIsActive, isActive, setCurrentTheme, currentTheme }) {
   const toggleMenu = () => {
     setIsActive(!isActive);
   };
   return (
     <HeaderWrapper>
-      <ThemeSelector setCurrentTheme={setCurrentTheme}></ThemeSelector>
+      <ThemeSelector setCurrentTheme={setCurrentTheme} currentTheme={currentTheme}></ThemeSelector>
       <StyledHeader>
         <Nav>
           <Logo href="/" id="logo">
@@ -38,7 +38,7 @@ const StyledHeader = styled.div`
   width: 80%;
   position: relative;
   z-index: 2;
-  min-height: 8vh;
+  min-height: 6vh; 
   display: flex;
   align-items: center;
   margin: auto;
@@ -52,7 +52,7 @@ const Nav = styled.nav`
 `;
 
 const Logo = styled.a`
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: ${(props) => props.theme.headerTextColor};
 `;
 
