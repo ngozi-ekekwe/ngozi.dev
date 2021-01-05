@@ -28,8 +28,8 @@ function Projects() {
                       })}
                   </ProjectTagWrapper>
                   <ProjectFooter>
-                    <ProjectLink href="">Source Code</ProjectLink>
-                    <ProjectLink href="">Live site</ProjectLink>
+                    {project.github && <ProjectLink href={project.github}>Source Code</ProjectLink>}
+                    {project.live &&<ProjectLink href={project.live}>Live site</ProjectLink>}
                   </ProjectFooter>
                 </ProjectContent>
               </Project>
