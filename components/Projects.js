@@ -24,7 +24,7 @@ function Projects() {
                   <ProjectTagWrapper>
                     {project.tags &&
                       project.tags.map((tag) => {
-                        return <ProjectTag>{tag}</ProjectTag>;
+                        return <ProjectTag src={`/svgs/${tag}.svg`} alt={tag} />;
                       })}
                   </ProjectTagWrapper>
                   <ProjectFooter>
@@ -66,7 +66,6 @@ const ProjectContent = styled.div`
   color: ${(props) => props.theme.bodyTextColor};
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
-    width: 95%;
     padding: 1.5rem 1rem;
   }
 `;
@@ -152,7 +151,7 @@ const Project = styled.div`
     display: flex;
     justify-content: space-between;
 
-    img {
+    ${ProjectImage} {
       object-fit: cover;
       @media screen and (max-width: ${(props) => props.theme.tablet}) {
         display: none;
@@ -176,23 +175,8 @@ export const ProjectTagWrapper = styled.div`
   flex-flow: row wrap;
 `;
 
-export const ProjectTag = styled.a`
-  background-color: rgba(32,33,36,0);
-  border: 1px solid ${(props) => props.theme.cardBorder};
-  border-radius: 20px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  display: block;
-  font-size: 14px;
-  height: 32px;
-  line-height: 30px;
-  margin: 0 8px 12px 0;
-  overflow: hidden;
-  padding: 0 12px;
-  text-decoration: none;
-  -webkit-transition: background-color .2s,border .2s;
-  transition: background-color .2s,border .2s;
-  text-wrap: wrap;
+export const ProjectTag = styled.img`
+  margin-right: 0.5rem;
 }
 `;
 

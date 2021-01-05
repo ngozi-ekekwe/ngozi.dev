@@ -16,10 +16,9 @@ function Introduction() {
     let scrollTop = window.scrollY,
       minHeight = 0,
       logoHeight = Math.max(minHeight, 250 - scrollTop);
-    if(logoHeight === 0) {
-      profileRef.current.style.border = 'none';
-    }
-    else {
+    if (logoHeight === 0) {
+      profileRef.current.style.border = "none";
+    } else {
       profileRef.current.style.border = "3px solid #fa6400";
     }
     setLogoHeight(logoHeight);
@@ -30,18 +29,17 @@ function Introduction() {
         <Name>Ngozi Ekekwe</Name>
         <DescriptionWrapper>
           <Description>
-          I’m a Front-End Developer working on Account Switch Kit, a solution
-            that provides a fully digital workflow that allows users to switch
-            their bank accounts and portfolios from one bank to another within
-            minutes at Finleap Connect
+            I’m a Front-End Developer currently living and working in Berlin. I
+            am passionate about building products that are accessible,
+            responsive, highly performant, and aesthetically pleasing to use.
           </Description>
           <SkillWrapper>
-            <img src='/svgs/reactlogo.svg' alt='next' />
-            <img src='/svgs/css.svg' alt='next' />
-            <img src='/svgs/html.svg' alt='next' />
-            <img src='/svgs/next.svg' alt='next' />
-            <img src='/svgs/nodejs.svg' alt='next' />
-        </SkillWrapper>
+            <img src="/svgs/reactlogo.svg" alt="next" />
+            <img src="/svgs/next.svg" alt="next" />
+            <img src="/svgs/css.svg" alt="next" />
+            <img src="/svgs/html.svg" alt="next" />
+            <img src="/svgs/nodejs.svg" alt="next" />
+          </SkillWrapper>
         </DescriptionWrapper>
       </StyledIntroduction>
       <ProfileStyled height={logoHeight}>
@@ -70,7 +68,7 @@ const Linear = keyframes`
   `;
 
 const SkillWrapper = styled.div`
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 
@@ -82,7 +80,7 @@ const SkillWrapper = styled.div`
     height: 40px;
     width: 40px;
   }
-`
+`;
 
 const StyledIntroduction = styled.div`
   position: relative;
@@ -118,7 +116,7 @@ const Name = styled.h1`
     position: absolute;
     width: calc(100%);
     animation-name: ${Linear};
-    animation-duration: .75s;
+    animation-duration: 0.75s;
     z-index: -1;
   }
 
@@ -137,12 +135,9 @@ const DescriptionWrapper = styled.div`
   }
 `;
 
-const Role = styled.h2`
-  font-size: 2rem;
-`;
-
 const Description = styled.p`
   text-align: center;
+  padding-bottom: 1rem;
   color: ${(props) => props.theme.bodyColor};
   font-size: 1.5rem;
   line-height: 2.17;
