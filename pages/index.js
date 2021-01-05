@@ -7,6 +7,7 @@ import Introduction from "../components/Introduction";
 import Projects from "../components/Projects";
 import Experiences from "../components/Experience";
 import Articles from "../components/Articles";
+import Journey from "../components/Journey";
 import Footer from "../components/Footer";
 
 export default function Home({ setCurrentTheme, currentTheme}) {
@@ -58,8 +59,8 @@ export default function Home({ setCurrentTheme, currentTheme}) {
       <Introduction />
       <Projects />
       <Experiences />
+      <Journey /> 
       <Articles />
-      
       <Sidebar isActive={isActive} setCurrentTheme={setCurrentTheme} currentTheme={currentTheme}/>
       <Cursor />
       <Footer />
