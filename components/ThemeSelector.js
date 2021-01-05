@@ -43,8 +43,7 @@ const Label = styled.label`
 `;
 
 const Slider = styled.div`
-  background-color: #fa6400;
-  opacity: 0.5;
+  background-color: black;
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -62,11 +61,6 @@ const Slider = styled.div`
     position: absolute;
     transition: 0.4s;
     width: 26px;
-
-    // @media screen and (max-width: ${(props) => props.theme.tablet}) {
-    //   height: 15px;
-    //   width: 15px;
-    // }
   }
 
   &.round {
@@ -82,7 +76,7 @@ const Input = styled.input`
   display: none;
 
   &:checked + .slider {
-    background-color: transparent;
+    background-color: #fa6400;
     border: 1px solid ${(props) =>props.theme.lightGray};
   }
 
