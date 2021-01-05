@@ -60,31 +60,27 @@ const SectionTitle = styled.h3`
 `;
 
 const ExperienceLayout = styled.div`
-  display: flex;
-  overflow: hidden;
   padding: 2rem 0;
   height: 100%;
   width: 100%;
 `;
 
 const SingleExperience = styled.div`
-  width: 0%;
-  height: 300px;
+  width: 100%;
+  display: none;
+  min-height: 300px;
   background-color: ${(props) => props.theme.experienceCard};
   border: 1px solid lavenderblush;
   border-radius: 5px;
-  display: flex;
   justify-content: center;
   padding: 1rem 1.5rem;
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: all 0.75s ease;
+  transform: translateX(-150%);
+  transition: width 0.75s ease;
 
   &.active {
-    width: 85%;
-    margin: 0 auto;
-    opacity: 1;
+    display: flex;
     transform: translateX(0);
+    transition: width 0.75s ease;
   }
 `;
 

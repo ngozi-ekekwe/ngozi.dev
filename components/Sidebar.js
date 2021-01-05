@@ -12,7 +12,6 @@ function Sidebar({ isActive, setCurrentTheme, currentTheme }) {
         <Header>Hello there!, thank you for visiting my porftfolio</Header>
 
         <Contact>
-          <h2>Send me a message!</h2>
           <p>
             Got a question or proposal, or just want to say hello? Go ahead.
           </p>
@@ -65,6 +64,7 @@ const SidebarStyled = styled.nav`
 
 const Header = styled.h1`
   font-size: 2rem;
+  text-align: center;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     font-size: 1rem;

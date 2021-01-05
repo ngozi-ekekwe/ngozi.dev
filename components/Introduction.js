@@ -116,7 +116,7 @@ const Name = styled.h1`
     position: absolute;
     width: calc(100%);
     animation-name: ${Linear};
-    animation-duration: 0.75s;
+    animation-duration: 0.65s;
     z-index: -1;
   }
 
