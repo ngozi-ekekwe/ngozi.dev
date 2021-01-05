@@ -67,7 +67,6 @@ const SingleExperience = styled.div`
   display: none;
   min-height: 300px;
   background-color: ${(props) => props.theme.experienceCard};
-  border: 1px solid lavenderblush;
   border-radius: 5px;
   justify-content: center;
   padding: 1rem 1.5rem;

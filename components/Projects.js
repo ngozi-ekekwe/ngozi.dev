@@ -10,10 +10,10 @@ function Projects() {
           {projectsDirectory &&
             projectsDirectory.map((project) => {
               return (
-                <Project>
-                  <ProjectImage>
+                <Project className={project.block ? "flex" : ""}>
+                  {project.block && <ProjectImage>
                     <img src={project.backgroundImage} alt="" />
-                  </ProjectImage>
+                  </ProjectImage>}
                   <ProjectContent>
                     <ProjectHeader>{project.name}</ProjectHeader>
                     <ShortDescription>{project.short}</ShortDescription>
@@ -37,8 +37,7 @@ function Projects() {
                           );
                         })}
                     </ProjectTagWrapper>
-                  </ProjectContent>
-                  <ProjectFooter>
+                    <ProjectFooter>
                     {project.github && (
                       <ProjectLink href={project.github}>
                         source sode
@@ -48,6 +47,7 @@ function Projects() {
                       <ProjectLink href={project.live}>live site</ProjectLink>
                     )}
                   </ProjectFooter>
+                  </ProjectContent>
                 </Project>
               );
             })}
@@ -77,7 +77,7 @@ const ProjectsStyled = styled.article`
 const ProjectContent = styled.div`
   padding: 1.5rem 2rem;
   border-radius: 5px;
-  background-color: ${(props) => props.theme.bodyBackgroundColor};
+  background-color: transparent;
   color: ${(props) => props.theme.bodyTextColor};
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
@@ -98,7 +98,7 @@ const ProjectImage = styled.figure`
   img {
     object-fit: cover;
     display: flex;
-    height: 195px;
+    height: 100%;
     width: 100%;
   }
 
@@ -163,16 +163,30 @@ const SectionTitle = styled.h3`
 `;
 
 const Project = styled.div`
-  width: calc((100% - (10px * 5)) / 3);
+  width: calc((100% - (10px * 2)) / 2);
+  height: 400px;
   position: relative;
-  background-color: ${(props) => props.theme.bodyBackgroundColor};
+  background-color: ${(props) => props.theme.cardBackgroundColor};
   box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.13);
   border-radius: 10px;
-  padding-bottom: 3rem;
   margin-bottom: 3rem;
 
-  &:hover {
-    scaleY(2);
+
+  &.flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    ${ProjectImage} {
+      object-fit: cover;
+      @media screen and (max-width: ${(props) => props.theme.tablet}) {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: ${(props) => props.theme.tablet}) {
+      flex-direction: column;
+    }
   }
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
@@ -204,14 +218,12 @@ export const ProjectTag = styled.img`
 `;
 
 const ProjectFooter = styled.footer`
-  diplsay: flex;
-  padding: 1.5rem 2rem;
   position: absolute;
-  bottom: 1em;
+  bottom: 1.5em;
   width: 100%;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
-    bottom: 1rem;
+    bottom: 1.5rem;
   }
 `;
 

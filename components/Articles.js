@@ -45,7 +45,6 @@ const ArticleStyled = styled.div`
 const LeftBox = styled.a`
   height: 100%;
   width: 100%;
-  border: 1px solid lavenderblush;
   display: flex;
   align-items: center;
   background-color: black;
@@ -67,7 +66,6 @@ const LeftBox = styled.a`
 const RightBox = styled.a`
   height: 100%;
   width: 100%;
-  border: 1px solid lavenderblush;
   display: flex;
   font-size: 2rem;
   background-color: black;

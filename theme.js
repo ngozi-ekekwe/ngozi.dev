@@ -5,6 +5,7 @@ export const color = {
   defaultLightColor: "linear-gradient(to right, #e3ffe7, #d9e7ff)",
   white: "#C9D1D9",
   black: "#24292E",
+  plainBlack: 'black',
   lightGray: "#fafafa"
 };
 
@@ -12,6 +13,7 @@ export const lightTheme = {
   themeSelectorBackgroundColor: color.lightGray,
   themeSelectorLeftTextColor: '#414143',
   experienceCard: color.backgroundLight,
+  cardBackgroundColor: color.lightGray,
 
   bodyBackground: color.lightGray,
   bodyTextColor: color.black,
@@ -21,7 +23,6 @@ export const lightTheme = {
 
   defaultColor: color.defaultLightColor,
   background: color.backgroundLight,
-  cardBackgroundColor: color.lightGray,
   borderColor: color.lightGray,
   
   
@@ -31,12 +32,11 @@ export const lightTheme = {
 export const darkTheme = {
   themeSelectorBackgroundColor: color.backgroundDark,
 
-
   themeSelectorRightBackgroundColor: color.backgroundDark,
   themeSelectorLeftTextColor: color.white,
   themeSelectoRightTextColor: color.white,
 
-  experienceCard: color.backgroundDark,
+  experienceCard: color.plainBlack,
 
 
   headerBackgroundColor: "#161c23",

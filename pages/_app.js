@@ -6,7 +6,7 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   const [isMounted, setIsMounted] = useState(false);
-  const [ currentTheme, setCurrentTheme ] = useState('light');
+  const [ currentTheme, setCurrentTheme ] = useState('dark');
   const theme = (currentTheme === 'light') ? lightTheme : darkTheme;
 
   useEffect(() => {

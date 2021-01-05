@@ -9,6 +9,7 @@ export const projectsDirectory = [
     github: "https://github.com/ngozi-ekekwe/reactive-movie",
     live: "https://reactive-movie.netlify.app/",
     tools: ["next", "reactlogo", "css"],
+    block: true,
     tags: ["#api", "#tmdb"],
     backgroundImage: "bg3.webp",
   },
@@ -22,6 +23,7 @@ export const projectsDirectory = [
     live: "https://dirtylemon.com/",
     tags: ["#api", "#tmdb"],
     backgroundImage: "bg3.webp",
+    block: false,
     tools: ["next", "reactlogo", "css"],
   },
 
@@ -36,6 +38,7 @@ export const projectsDirectory = [
     live: "https://reactive-movie.netlify.app/",
     tags: ["#api", "#tmdb"],
     backgroundImage: "bg3.webp",
+    block: false,
     tools: ["css", "html"],
   },
   // {
