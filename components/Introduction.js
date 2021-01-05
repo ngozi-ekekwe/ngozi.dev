@@ -30,11 +30,18 @@ function Introduction() {
         <Name>Ngozi Ekekwe</Name>
         <DescriptionWrapper>
           <Description>
-            I’m a Front-End Developer working on Account Switch Kit, a solution
+          I’m a Front-End Developer working on Account Switch Kit, a solution
             that provides a fully digital workflow that allows users to switch
             their bank accounts and portfolios from one bank to another within
             minutes at Finleap Connect
           </Description>
+          <SkillWrapper>
+            <img src='/svgs/reactlogo.svg' alt='next' />
+            <img src='/svgs/css.svg' alt='next' />
+            <img src='/svgs/html.svg' alt='next' />
+            <img src='/svgs/next.svg' alt='next' />
+            <img src='/svgs/nodejs.svg' alt='next' />
+        </SkillWrapper>
         </DescriptionWrapper>
       </StyledIntroduction>
       <ProfileStyled height={logoHeight}>
@@ -62,11 +69,27 @@ const Linear = keyframes`
  }
   `;
 
+const SkillWrapper = styled.div`
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+  img + img {
+    margin-left: 1rem;
+  }
+
+  img {
+    height: 40px;
+    width: 40px;
+  }
+`
+
 const StyledIntroduction = styled.div`
   position: relative;
   width: 100%;
   background-image: ${(props) => props.theme.defaultColor};
-  height: 80vh;
+  height: 70vh;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;

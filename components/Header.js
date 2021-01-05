@@ -49,6 +49,7 @@ const Nav = styled.nav`
 
 const Logo = styled.a`
   font-size: 1.5rem;
+  text-decoration: underline;
   color: ${(props) => props.theme.headerTextColor};
 `;
 
