@@ -9,7 +9,7 @@ export const projectsDirectory = [
     github: "https://github.com/ngozi-ekekwe/reactive-movie",
     live: "https://reactive-movie.netlify.app/",
     tools: ["next", "reactlogo", "css"],
-    tags: ["#javascript", "#asynchronous calls", "#tmdb", "#api"],
+    tags: ["#api", "#tmdb"],
     backgroundImage: "bg3.webp",
   },
   {
@@ -20,7 +20,7 @@ export const projectsDirectory = [
       "A fun take on encouraging young voters to vote in the general 2019 Nigerian elections A fun take on encouraging young voters to vote in the general 2019 Nigerian elections",
     block: false,
     live: "https://dirtylemon.com/",
-    tags: ["#javascript", "#asynchronous calls", "#tmdb", "#api"],
+    tags: ["#api", "#tmdb"],
     tools: ["next", "reactlogo", "css"],
   },
 
@@ -33,7 +33,7 @@ export const projectsDirectory = [
     block: false,
     github: "https://github.com/ngozi-ekekwe/reactive-movie",
     live: "https://reactive-movie.netlify.app/",
-    tags: ["#javascript", "#asynchronous calls", "#tmdb", "#api"],
+    tags: ["#api", "#tmdb"],
     tools: ["css", "html"],
   },
   // {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { experienceDirectory } from "../utils/experiences";
 
-function Experiences(props) {
+function Experiences() {
   const workExperience = experienceDirectory;
   const [carouselIndex, setCarouselIndex] = useState(0);
   return (
@@ -86,6 +86,10 @@ const SingleExperienceWrapper = styled.div`
   h1 {
     font-size: 1.6rem;
     margin-bottom: 0;
+
+    @media screen and (max-width: ${(props) => props.theme.tablet}) {
+      font-size: 1.2rem;
+    }
   };
 
   h2 {
@@ -97,6 +101,10 @@ const SingleExperienceWrapper = styled.div`
 
   small {
     font-size: 0.9rem;
+  }
+
+  p {
+    line-height: 1.7;
   }
 
 `;
