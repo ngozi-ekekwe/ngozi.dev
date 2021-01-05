@@ -10,13 +10,10 @@ function Projects() {
           {projectsDirectory &&
             projectsDirectory.map((project) => {
               return (
-                <Project className={project.block ? "flex" : ""}>
-                  {project.block && (
-                    <ProjectImage
-                      src={project.backgroundImage}
-                      alt=""
-                    ></ProjectImage>
-                  )}
+                <Project>
+                  <ProjectImage>
+                    <img src={project.backgroundImage} alt="" />
+                  </ProjectImage>
                   <ProjectContent>
                     <ProjectHeader>{project.name}</ProjectHeader>
                     <ShortDescription>{project.short}</ShortDescription>
@@ -40,17 +37,17 @@ function Projects() {
                           );
                         })}
                     </ProjectTagWrapper>
-                    <ProjectFooter>
-                      {project.github && (
-                        <ProjectLink href={project.github}>
-                          Source Code
-                        </ProjectLink>
-                      )}
-                      {project.live && (
-                        <ProjectLink href={project.live}>Live site</ProjectLink>
-                      )}
-                    </ProjectFooter>
                   </ProjectContent>
+                  <ProjectFooter>
+                    {project.github && (
+                      <ProjectLink href={project.github}>
+                        source sode
+                      </ProjectLink>
+                    )}
+                    {project.live && (
+                      <ProjectLink href={project.live}>live site</ProjectLink>
+                    )}
+                  </ProjectFooter>
                 </Project>
               );
             })}
@@ -62,25 +59,24 @@ function Projects() {
 
 const ProjectDiv = styled.section`
   width: 100%;
+  min-height: 100%;
   background-color: ${(props) => props.theme.headerBackgroundColor};
 `;
 
-const ProjectsStyled = styled.div`
+const ProjectsStyled = styled.article`
   width: 80%;
   margin: 0rem auto;
-  padding-top: 150px;
+  padding-top: 140px;
+  padding-bottom: 3rem;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
-    padding-top: 150px;
+    padding-top: 140px;
   }
 `;
 
 const ProjectContent = styled.div`
-  height: 100%;
-  position: relative;
   padding: 1.5rem 2rem;
   border-radius: 5px;
-  border: 1px solid lavenderblush;
   background-color: ${(props) => props.theme.bodyBackgroundColor};
   color: ${(props) => props.theme.bodyTextColor};
 
@@ -97,9 +93,18 @@ const ProjectHashTag = styled.span`
   }
 `;
 
-const ProjectImage = styled.img`
-  height: 100%;
-  width: auto;
+const ProjectImage = styled.figure`
+  margin: 1rem;
+  img {
+    object-fit: cover;
+    display: flex;
+    height: 195px;
+    width: 100%;
+  }
+
+  @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    display: none;
+  }
 `;
 
 const Slide = keyframes`
@@ -115,7 +120,7 @@ const ProjectWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 4rem;
+  margin-top: 1rem;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     margin-top: 2rem;
@@ -123,15 +128,17 @@ const ProjectWrapper = styled.section`
 `;
 
 const ProjectHeader = styled.header`
-  font-size: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
-    font-size: 1.5rem;
+    font-size1 1.5rem;
   }
 `;
 
 const ProjectDescription = styled.p`
   line-height: 1.7;
+  color: #64707d;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     display: none;
@@ -140,8 +147,10 @@ const ProjectDescription = styled.p`
 
 const ShortDescription = styled.p`
   display: none;
+  color: #64707d;
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     display: block;
+    color: #64707d;
   }
 `;
 
@@ -154,17 +163,21 @@ const SectionTitle = styled.h3`
 `;
 
 const Project = styled.div`
-  width: calc((100% - (10px * 2)) / 2);
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  width: calc((100% - (10px * 5)) / 3);
+  position: relative;
   background-color: ${(props) => props.theme.bodyBackgroundColor};
+  box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.13);
+  border-radius: 10px;
+  padding-bottom: 3rem;
   margin-bottom: 3rem;
-  height: 400px;
+
+  &:hover {
+    scaleY(2);
+  }
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     margin-bottom: 1rem;
   }
-
   animation-name: ${Slide};
   animation-duration: 0.75s;
 
@@ -172,27 +185,10 @@ const Project = styled.div`
     width: 100%;
     height: 250px;
   }
-
-  &.flex {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-
-    ${ProjectImage} {
-      object-fit: cover;
-      @media screen and (max-width: ${(props) => props.theme.tablet}) {
-        display: none;
-      }
-    }
-
-    @media screen and (max-width: ${(props) => props.theme.tablet}) {
-      flex-direction: column;
-    }
-  }
 `;
 
 export const ProjectTagWrapper = styled.div`
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,8 +205,9 @@ export const ProjectTag = styled.img`
 
 const ProjectFooter = styled.footer`
   diplsay: flex;
+  padding: 1.5rem 2rem;
   position: absolute;
-  bottom: 2.5rem;
+  bottom: 1em;
   width: 100%;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {

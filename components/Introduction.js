@@ -156,6 +156,7 @@ const ProfileStyled = styled.div`
   position: absolute;
   display: flex;
   left: 50%;
+ 
   transform: translate(-50%, 0);
   margin-top: -100px;
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
