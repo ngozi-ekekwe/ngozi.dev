@@ -72,7 +72,8 @@ const StyledIntroduction = styled.div`
   align-items: center;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
-    padding: 3.2rem 0;
+    padding: 3rem 0;
+    height: 100%;
   }
 `;
 
@@ -108,6 +109,7 @@ const DescriptionWrapper = styled.div`
   margin: 0 auto;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
+    padding: 1rem 0rem 3rem;
     width: 80%;
   }
 `;
