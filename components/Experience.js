@@ -16,12 +16,12 @@ function Experiences(props) {
                 <SingleExperience
                   className={carouselIndex === index ? "active" : ""}
                 >
-                  <div>
+                  <SingleExperienceWrapper>
                     <h1>{experience.role}</h1>
                     <h2>{experience.company}</h2>
                     <small>{experience.timeLine}</small>
                     <p>{experience.description}</p>
-                  </div>
+                  </SingleExperienceWrapper>
                 </SingleExperience>
               );
             })}
@@ -56,11 +56,9 @@ const ExperienceWrapper = styled.section`
 
 const SectionTitle = styled.h3`
   font-size: 2rem;
-  padding: 2rem 0;
 `;
 
 const ExperienceLayout = styled.div`
-  padding: 2rem 0;
   height: 100%;
   width: 100%;
 `;
@@ -82,6 +80,25 @@ const SingleExperience = styled.div`
     transform: translateX(0);
     transition: width 0.75s ease;
   }
+`;
+
+const SingleExperienceWrapper = styled.div`
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+  };
+
+  h2 {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.1rem;
+    color: #64707d;
+  }
+
+  small {
+    font-size: 0.9rem;
+  }
+
 `;
 
 const NavCircleWrapper = styled.ul`

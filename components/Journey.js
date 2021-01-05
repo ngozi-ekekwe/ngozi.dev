@@ -68,7 +68,7 @@ const Paragraph = styled.li`
 `;
 
 const Description = styled.ul`
-  padding: 0;
+  padding: 1rem 0;
 `;
 
 export default Journey;

@@ -5,38 +5,57 @@ function Projects() {
   return (
     <ProjectDiv>
       <ProjectsStyled>
-      <SectionTitle>Selected Projects</SectionTitle>
-      <ProjectWrapper>
-        {projectsDirectory &&
-          projectsDirectory.map((project) => {
-            return (
-              <Project className={project.block ? "flex" : ""}>
-                {project.block && (
-                  <ProjectImage
-                    src={project.backgroundImage}
-                    alt=""
-                  ></ProjectImage>
-                )}
-                <ProjectContent>
-                  <ProjectHeader>{project.name}</ProjectHeader>
-                  <ShortDescription>{project.short}</ShortDescription>
-                  <ProjectDescription>{project.description}</ProjectDescription>
-                  <ProjectTagWrapper>
-                    {project.tags &&
-                      project.tags.map((tag) => {
-                        return <ProjectTag src={`/svgs/${tag}.svg`} alt={tag} />;
-                      })}
-                  </ProjectTagWrapper>
-                  <ProjectFooter>
-                    {project.github && <ProjectLink href={project.github}>Source Code</ProjectLink>}
-                    {project.live &&<ProjectLink href={project.live}>Live site</ProjectLink>}
-                  </ProjectFooter>
-                </ProjectContent>
-              </Project>
-            );
-          })}
-      </ProjectWrapper>
-    </ProjectsStyled>
+        <SectionTitle>Selected Projects</SectionTitle>
+        <ProjectWrapper>
+          {projectsDirectory &&
+            projectsDirectory.map((project) => {
+              return (
+                <Project className={project.block ? "flex" : ""}>
+                  {project.block && (
+                    <ProjectImage
+                      src={project.backgroundImage}
+                      alt=""
+                    ></ProjectImage>
+                  )}
+                  <ProjectContent>
+                    <ProjectHeader>{project.name}</ProjectHeader>
+                    <ShortDescription>{project.short}</ShortDescription>
+                    <ProjectDescription>
+                      {project.description}
+                    </ProjectDescription>
+                    <ProjectTagWrapper>
+                      {project.tags &&
+                        project.tags.map((tag) => {
+                          return <ProjectHashTag>{tag}</ProjectHashTag>;
+                        })}
+                    </ProjectTagWrapper>
+                    <ProjectTagWrapper>
+                      {project.tools &&
+                        project.tools.map((tools) => {
+                          return (
+                            <ProjectTag
+                              src={`/svgs/${tools}.svg`}
+                              alt={tools}
+                            />
+                          );
+                        })}
+                    </ProjectTagWrapper>
+                    <ProjectFooter>
+                      {project.github && (
+                        <ProjectLink href={project.github}>
+                          Source Code
+                        </ProjectLink>
+                      )}
+                      {project.live && (
+                        <ProjectLink href={project.live}>Live site</ProjectLink>
+                      )}
+                    </ProjectFooter>
+                  </ProjectContent>
+                </Project>
+              );
+            })}
+        </ProjectWrapper>
+      </ProjectsStyled>
     </ProjectDiv>
   );
 }
@@ -67,6 +86,14 @@ const ProjectContent = styled.div`
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     padding: 1.5rem 1rem;
+  }
+`;
+
+const ProjectHashTag = styled.span`
+  color: #64707d;
+  font-size: 1rem;
+  & + & {
+    padding-left: 1rem;
   }
 `;
 
@@ -130,7 +157,7 @@ const Project = styled.div`
   width: calc((100% - (10px * 2)) / 2);
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.12);
-  background-color: ${(props) => props.theme.bodyBackgroundColor};;
+  background-color: ${(props) => props.theme.bodyBackgroundColor};
   margin-bottom: 3rem;
   height: 400px;
 

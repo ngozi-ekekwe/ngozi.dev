@@ -36,6 +36,7 @@ function Introduction() {
           <SkillWrapper>
             <img src="/svgs/reactlogo.svg" alt="next" />
             <img src="/svgs/next.svg" alt="next" />
+            <img src="/svgs/typescript.svg" alt="next" />
             <img src="/svgs/css.svg" alt="next" />
             <img src="/svgs/html.svg" alt="next" />
             <img src="/svgs/nodejs.svg" alt="next" />

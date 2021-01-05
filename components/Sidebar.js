@@ -39,7 +39,7 @@ function Sidebar({ isActive, setCurrentTheme, currentTheme }) {
   );
 }
 
-const SidebarStyled = styled.nav`
+const SidebarStyled = styled.aside`
   position: fixed;
   top: 0;
   left: 0;
@@ -71,7 +71,7 @@ const Header = styled.h1`
   }
 `;
 
-const Wrapper = styled.div`
+const Wrapper = styled.nav`
   width: 100%;
   height: 100%;
   display: flex;

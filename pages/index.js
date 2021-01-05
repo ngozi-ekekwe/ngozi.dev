@@ -10,10 +10,10 @@ import Articles from "../components/Articles";
 import Journey from "../components/Journey";
 import Footer from "../components/Footer";
 
-export default function Home({ setCurrentTheme, currentTheme}) {
+export default function Home({ setCurrentTheme, currentTheme }) {
   const [isActive, setIsActive] = useState(false);
   return (
-    <div>
+    <>
       <Head>
         <title>Ngozi Ekekwe Frontend developer</title>
         <link rel="icon" href="/favicon.ico" />
@@ -56,14 +56,20 @@ export default function Home({ setCurrentTheme, currentTheme}) {
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </Head>
       <Header isActive={isActive} setIsActive={setIsActive} />
-      <Introduction />
-      <Projects />
-      <Experiences />
-      <Journey /> 
-      <Articles />
-      <Sidebar isActive={isActive} setCurrentTheme={setCurrentTheme} currentTheme={currentTheme}/>
-      <Cursor />
+      <main>
+        <Introduction />
+        <Projects />
+        <Experiences />
+        <Journey />
+        <Articles />
+        <Sidebar
+          isActive={isActive}
+          setCurrentTheme={setCurrentTheme}
+          currentTheme={currentTheme}
+        />
+        <Cursor />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }

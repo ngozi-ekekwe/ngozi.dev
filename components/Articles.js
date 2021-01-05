@@ -4,24 +4,24 @@ function Articles() {
   return (
     <ArticleDiv>
       <ArticleWrapper>
-      <SectionTitle>Journal</SectionTitle>
-      <ArticleStyled>
-        <LeftBox href="">
-          <h3>Meduim</h3>
-        </LeftBox>
-        <RightBox href="">
-          <h3>Dev.to</h3>
-        </RightBox>
-      </ArticleStyled>
-    </ArticleWrapper>
+        <SectionTitle>Journal</SectionTitle>
+        <ArticleStyled>
+          <LeftBox href="https://medium.com/@rose.ekekwe">
+            <h3>Meduim</h3>
+          </LeftBox>
+          <RightBox href="https://dev.to/ngoziekekwe">
+            <h3>Dev.to</h3>
+          </RightBox>
+        </ArticleStyled>
+      </ArticleWrapper>
     </ArticleDiv>
   );
 }
 
 const ArticleDiv = styled.section`
   background-color: ${(props) => props.theme.headerBackgroundColor};
-`
-const ArticleWrapper = styled.div`
+`;
+const ArticleWrapper = styled.article`
   min-height: 50vh;
   width: 80%;
   margin: auto;

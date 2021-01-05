@@ -5,7 +5,7 @@ function Footer() {
     <FooterStyled>
       <div>
       <button>Say Hello 👋🏼</button>
-        <div className="test">
+        <div className="flex">
           <small>Designed and developed by me 💞</small>
           <small>&copy; Forever and ever until the end of time</small>
         </div>
@@ -35,7 +35,11 @@ const FooterStyled = styled.footer`
     }
   }
 
-  .test {
+  small {
+    padding: 0.2rem 0;
+  }
+
+  .flex {
     display: flex;
     flex-direction: column;
   }

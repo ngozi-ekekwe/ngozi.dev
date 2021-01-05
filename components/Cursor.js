@@ -16,15 +16,15 @@ function Cursor() {
   const activeCursor = (e) => {
     const item = e.target;
     if(item.id === 'logo' || item.id === 'hamburger') {
-      mouse.current.classList.add("nav-active");
+      mouse.current &&  mouse.current.classList.add("nav-active");
     }else {
-      mouse && mouse.current.classList.remove("nav-active");
+      mouse.current && mouse.current.classList.remove("nav-active");
     }
-    // if(item.id === 'profile') {
-    //   mouse.current.classList.add("profile-active");
-    // }else {
-    //   mouse && mouse.current.classList.remove("profile-active");
-    // }
+    if(item.id === 'profile') {
+      mouse.current &&  mouse.current.classList.add("profile-active");
+    }else {
+      mouse.current && mouse.current.classList.remove("profile-active");
+    }
   };
   return (
     <CursorStyled className="cursor" ref={mouse}>
@@ -45,6 +45,7 @@ const CursorStyled = styled.div`
   transition: all 0.5s ease-in-out;
   transition-property: background, transform;
   transform-origin: 75% 75%;
+  opacity: 0.8;
 
   &.nav-active {
     background: #d9e7ff;
@@ -54,7 +55,7 @@ const CursorStyled = styled.div`
   &.profile-active {
     background: #e3ffe7;
     opacity: 0.8;
-    transform: scale(5);
+    transform: scale(6);
   }
 `;
 
