@@ -94,7 +94,7 @@ const ProjectHashTag = styled.span`
 `;
 
 const ProjectImage = styled.figure`
-  margin: 1rem;
+  margin: 0rem;
   img {
     object-fit: cover;
     display: flex;
