@@ -34,10 +34,12 @@ const HeaderWrapper = styled.header`
 
 const StyledHeader = styled.div`
   width: 80%;
+  max-width: ${(props) => props.theme.maxWidth};
   min-height: 6vh; 
   display: flex;
   align-items: center;
   margin: auto;
+  margin: 0 auto;
 `;
 
 const Nav = styled.nav`

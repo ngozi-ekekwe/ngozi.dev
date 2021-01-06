@@ -85,9 +85,8 @@ const SkillWrapper = styled.div`
 
 const StyledIntroduction = styled.div`
   position: relative;
-  width: 100%;
   background-image: ${(props) => props.theme.defaultColor};
-  height: 70vh;
+  height: 100%;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -128,10 +127,12 @@ const Name = styled.h1`
 
 const DescriptionWrapper = styled.div`
   width: 50%;
+  padding-bottom: 11rem;
   margin: 0 auto;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     padding: 1rem 0rem 3rem;
+    max-width: ${(props) => props.theme.maxWidth};
     width: 80%;
   }
 `;

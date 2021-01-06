@@ -32,6 +32,7 @@ const ToggleWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 80%;
+  max-width: ${(props) => props.theme.maxWidth};
   margin: 0 auto;
 `;
 

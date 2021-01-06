@@ -97,6 +97,7 @@ const Wrapper = styled.nav`
     flex-direction: column;
     justify-content: center;
     width: 80%;
+    max-width: ${(props) => props.theme.maxWidth};
     margin: 5rem auto;
   }
 `;

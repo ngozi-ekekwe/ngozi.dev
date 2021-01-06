@@ -51,6 +51,7 @@ const ExperiencesStyled = styled.section`
 
 const ExperienceWrapper = styled.section`
   width: 80%;
+  max-width: ${(props) => props.theme.maxWidth};
   overflow: hidden;
   margin: 0 auto;
 `;

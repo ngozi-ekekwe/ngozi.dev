@@ -27,6 +27,7 @@ const FooterStyled = styled.footer`
     align-items: center;
     justify-content: space-between;
     width: 80%;
+    max-width: ${(props) => props.theme.maxWidth};
     margin: 1rem auto;
 
     @media screen and (max-width: ${(props) => props.theme.tablet}) {

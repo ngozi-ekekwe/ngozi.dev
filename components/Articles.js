@@ -24,6 +24,7 @@ const ArticleDiv = styled.section`
 const ArticleWrapper = styled.article`
   min-height: 50vh;
   width: 80%;
+  max-width: ${(props) => props.theme.maxWidth};
   margin: auto;
 `;
 

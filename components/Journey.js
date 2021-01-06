@@ -39,6 +39,7 @@ const JournerStyled = styled.section`
 
 const JourneyWrapper = styled.div`
   width: 80%;
+  max-width: ${(props) => props.theme.maxWidth};
   margin: 0 auto;
 `;
 

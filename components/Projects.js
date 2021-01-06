@@ -66,6 +66,7 @@ const ProjectDiv = styled.section`
 
 const ProjectsStyled = styled.article`
   width: 80%;
+  max-width: ${(props) => props.theme.maxWidth};
   margin: 0rem auto;
   padding-top: 140px;
   padding-bottom: 3rem;
