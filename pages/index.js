@@ -66,7 +66,7 @@ export default function Home({ setCurrentTheme, currentTheme }) {
           setCurrentTheme={setCurrentTheme}
           currentTheme={currentTheme}
         />
-        {/* <Cursor /> */}
+        <Cursor />
       </main>
       <Footer />
     </>

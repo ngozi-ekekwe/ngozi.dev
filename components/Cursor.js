@@ -10,7 +10,7 @@ function Cursor() {
 
   const cursor = (e) => {
     mouse.current.style.top = e.pageY + "px";
-    mouse.current.style.left = "98%";
+    mouse.current.style.left = e.pageX + "px";
   };
 
   const activeCursor = (e) => {
