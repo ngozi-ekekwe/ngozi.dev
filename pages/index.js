@@ -22,15 +22,14 @@ export default function Home({ setCurrentTheme, currentTheme }) {
           name="keywords"
           content="Nextjs, React, Developer, Berlin, Germany,"
         ></meta>
+         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="msapplication-TileColor" content="#4831D8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
-          content="Ngozi Ekekwe - Frontend Engineer living in Berlin"
+          content="Ngozi Ekekwe - Frontend Engineer living and working in Berlin"
         />
-        {/* favicons */}
         {/* Twitter Tags */}
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@NgoziEkekwe" />
         <meta name="twitter:creator" content="@NgoziEkekwe" />
         <meta name="twitter:url" content="https://ngozi.dev" />
@@ -67,7 +66,7 @@ export default function Home({ setCurrentTheme, currentTheme }) {
           setCurrentTheme={setCurrentTheme}
           currentTheme={currentTheme}
         />
-        <Cursor />
+        {/* <Cursor /> */}
       </main>
       <Footer />
     </>

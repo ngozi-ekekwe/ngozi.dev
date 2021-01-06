@@ -14,6 +14,7 @@ function Experiences() {
             experienceDirectory.map((experience, index) => {
               return (
                 <SingleExperience
+                  key={index}
                   className={carouselIndex === index ? "active" : ""}
                 >
                   <SingleExperienceWrapper>
@@ -31,6 +32,7 @@ function Experiences() {
             workExperience.map((_, index) => {
               return (
                 <NavCircle
+                  key={index}
                   className={carouselIndex === index ? "active" : ""}
                   onClick={() => setCarouselIndex(index)}
                 ></NavCircle>

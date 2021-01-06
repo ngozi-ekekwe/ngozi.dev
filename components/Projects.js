@@ -8,9 +8,9 @@ function Projects() {
         <SectionTitle>Selected Projects</SectionTitle>
         <ProjectWrapper>
           {projectsDirectory &&
-            projectsDirectory.map((project) => {
+            projectsDirectory.map((project, index) => {
               return (
-                <Project className={project.block ? "flex" : ""}>
+                <Project className={project.block ? "flex" : ""} key={index}>
                   {project.block && <ProjectImage>
                     <img src={project.backgroundImage} alt="" />
                   </ProjectImage>}
@@ -22,15 +22,16 @@ function Projects() {
                     </ProjectDescription>
                     <ProjectTagWrapper>
                       {project.tags &&
-                        project.tags.map((tag) => {
-                          return <ProjectHashTag>{tag}</ProjectHashTag>;
+                        project.tags.map((tag, index) => {
+                          return <ProjectHashTag key={index}>{tag}</ProjectHashTag>;
                         })}
                     </ProjectTagWrapper>
                     <ProjectTagWrapper>
                       {project.tools &&
-                        project.tools.map((tools) => {
+                        project.tools.map((tools, index) => {
                           return (
                             <ProjectTag
+                              key={index}
                               src={`/svgs/${tools}.svg`}
                               alt={tools}
                             />

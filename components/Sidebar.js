@@ -17,21 +17,15 @@ function Sidebar({ isActive, setCurrentTheme, currentTheme }) {
           </p>
           <button>Say Hello 👋🏼</button>
         </Contact>
-        <ul class="nav-links">
+        <ul>
           <li>
-            <a href="">Github</a>
+            <a href="https://github.com/ngozi-ekekwe">Github</a>
           </li>
           <li>
-            <a href="">Twitter</a>
+            <a href="https://twitter.com/NgoziEkekwe">Twitter</a>
           </li>
           <li>
-            <a href="">Youtube</a>
-          </li>
-          <li>
-            <a href="">LinkedIn</a>
-          </li>
-          <li>
-            <a href="">Instagram</a>
+            <a href="https://www.linkedin.com/in/ekekwengozi/">LinkedIn</a>
           </li>
         </ul>
       </Wrapper>

@@ -8,7 +8,7 @@ function ThemeSelector({ setCurrentTheme, currentTheme }) {
   return (
     <ThemeSelectorStyled>
       <ToggleWrapper>
-        <Label className="theme-switch" for="checkbox" htmlFor="checkbox">
+        <Label className="theme-switch" htmlFor="checkbox">
           <Input type="checkbox" id="checkbox" onChange={toggleTheme} />
           <Slider className="slider round"></Slider>
         </Label>
