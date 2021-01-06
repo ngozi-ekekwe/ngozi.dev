@@ -10,7 +10,7 @@ export default createGlobalStyle`
   body {
     background-color: ${(props) => props.theme.bodyBackground};
     color: ${(props) => props.theme.bodyTextColor};
-    overflowX: hidden;
+    overflow-x: hidden;
     transition: all 0.5s ease;
   }
 `;
