@@ -9,7 +9,7 @@ export const projectsDirectory = [
     github: "https://github.com/ngozi-ekekwe/reactive-movie",
     live: "https://reactive-movie.netlify.app/",
     tools: ["next", "reactlogo", "css"],
-    block: true,
+    block: false,
     tags: ["#api", "#tmdb"],
     backgroundImage: "bg3.webp",
   },
