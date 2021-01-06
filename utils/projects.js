@@ -5,11 +5,10 @@ export const projectsDirectory = [
     short: "A Netflix Wannabe",
     description:
       "A fun project project I decided to work on after spending my whole day binge watching movies on Netflix, I consumed TMDb to get movies, shows and other categories",
-    block: false,
     github: "https://github.com/ngozi-ekekwe/reactive-movie",
     live: "https://reactive-movie.netlify.app/",
     tools: ["next", "reactlogo", "css"],
-    block: false,
+    block: true,
     tags: ["#api", "#tmdb"],
     backgroundImage: "bg3.webp",
   },
