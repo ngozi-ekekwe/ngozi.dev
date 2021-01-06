@@ -222,6 +222,7 @@ const ProjectFooter = styled.footer`
   position: absolute;
   bottom: 1.5em;
   width: 100%;
+  max-width: 100%;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     bottom: 1.5rem;
