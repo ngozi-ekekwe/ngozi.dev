@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { experienceDirectory } from "../utils/experiences";
 
 function Experiences() {
@@ -44,6 +44,15 @@ function Experiences() {
   );
 }
 
+const Slide = keyframes`
+from {
+  transform: translateX(100%);
+}
+to {
+  transform: translateX(0);
+}
+ `;
+
 const ExperiencesStyled = styled.section`
   width: 100%;
   background-image: ${(props) => props.theme.defaultColor};
@@ -60,11 +69,6 @@ const SectionTitle = styled.h3`
   font-size: 2rem;
 `;
 
-const ExperienceLayout = styled.div`
-  height: 100%;
-  width: 100%;
-`;
-
 const SingleExperience = styled.div`
   width: 100%;
   display: none;
@@ -73,14 +77,19 @@ const SingleExperience = styled.div`
   border-radius: 5px;
   justify-content: center;
   padding: 1rem 1.5rem;
-  transform: translateX(-150%);
+  box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.13);
   transition: width 0.75s ease;
 
   &.active {
+    animation-name: ${Slide};
+    animation-duration: 0.75s;
     display: flex;
-    transform: translateX(0);
-    transition: width 0.75s ease;
   }
+`;
+
+const ExperienceLayout = styled.div`
+  height: 100%;
+  width: 100%;
 `;
 
 const SingleExperienceWrapper = styled.div`
@@ -91,7 +100,7 @@ const SingleExperienceWrapper = styled.div`
     @media screen and (max-width: ${(props) => props.theme.tablet}) {
       font-size: 1.2rem;
     }
-  };
+  }
 
   h2 {
     font-size: 1rem;
@@ -107,7 +116,6 @@ const SingleExperienceWrapper = styled.div`
   p {
     line-height: 1.7;
   }
-
 `;
 
 const NavCircleWrapper = styled.ul`

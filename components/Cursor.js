@@ -9,8 +9,10 @@ function Cursor() {
   }, []);
 
   const cursor = (e) => {
-    mouse.current.style.top = e.pageY + "px";
-    mouse.current.style.left = e.pageX + "px";
+    if(mouse.current) {
+      mouse.current.style.top = e.pageY + "px";
+      mouse.current.style.left = e.pageX + "px";
+    }
   };
 
   const activeCursor = (e) => {

@@ -20,7 +20,6 @@ function ThemeSelector({ setCurrentTheme, currentTheme }) {
 const ThemeSelectorStyled = styled.section`
   min-height: 4vh;
   width: 100%;
-  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,16 +30,13 @@ const ToggleWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
-  max-width: ${(props) => props.theme.maxWidth};
-  margin: 0 auto;
 `;
 
 const Label = styled.label`
   display: inline-block;
-  height: 34px;
+  height: 25px;
   position: relative;
-  width: 60px;
+  width: 55px;
 `;
 
 const Slider = styled.div`
@@ -55,13 +51,13 @@ const Slider = styled.div`
 
   &:before {
     background-color: #fff;
-    bottom: 4px;
+    bottom: 3px;
     content: "";
-    height: 26px;
+    height: 20px;
     left: 4px;
     position: absolute;
     transition: 0.4s;
-    width: 26px;
+    width: 20px;
   }
 
   &.round {

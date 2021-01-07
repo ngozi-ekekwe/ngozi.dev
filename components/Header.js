@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import ThemeSelector from "./ThemeSelector";
 
-function Header({ setIsActive, isActive }) {
+function Header({ setIsActive, isActive, setCurrentTheme, currentTheme }) {
   const toggleMenu = () => {
     setIsActive(!isActive);
   };
@@ -11,6 +12,10 @@ function Header({ setIsActive, isActive }) {
           <Logo href="/" id="logo">
             ng.me
           </Logo>
+          <ThemeSelector
+            setCurrentTheme={setCurrentTheme}
+            currentTheme={currentTheme}
+          ></ThemeSelector>
           <Hamburger
             id="hamburger"
             onClick={toggleMenu}
@@ -35,7 +40,7 @@ const HeaderWrapper = styled.header`
 const StyledHeader = styled.div`
   width: 80%;
   max-width: ${(props) => props.theme.maxWidth};
-  min-height: 6vh; 
+  min-height: 6vh;
   display: flex;
   align-items: center;
   margin: auto;
@@ -51,7 +56,6 @@ const Nav = styled.nav`
 
 const Logo = styled.a`
   font-size: 1.5rem;
-  text-decoration: underline;
   color: ${(props) => props.theme.headerTextColor};
 `;
 

@@ -54,18 +54,15 @@ export default function Home({ setCurrentTheme, currentTheme }) {
         {/* facebook */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </Head>
-      <Header isActive={isActive} setIsActive={setIsActive} />
+      <Header isActive={isActive} setIsActive={setIsActive} setCurrentTheme={setCurrentTheme}
+          currentTheme={currentTheme} />
       <main>
         <Introduction />
         <Projects />
         <Experiences />
         <Journey />
         <Articles />
-        <Sidebar
-          isActive={isActive}
-          setCurrentTheme={setCurrentTheme}
-          currentTheme={currentTheme}
-        />
+        <Sidebar isActive={isActive} />
         <Cursor />
       </main>
       <Footer />

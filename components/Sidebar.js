@@ -1,14 +1,10 @@
 import styled from "styled-components";
 import ThemeSelector from "./ThemeSelector";
 
-function Sidebar({ isActive, setCurrentTheme, currentTheme }) {
+function Sidebar({ isActive }) {
   return (
     <SidebarStyled className={isActive ? "active" : ""}>
       <Wrapper>
-        <ThemeSelector
-          setCurrentTheme={setCurrentTheme}
-          currentTheme={currentTheme}
-        ></ThemeSelector>
         <Header>Hello there!, thank you for visiting my porftfolio</Header>
 
         <Contact>

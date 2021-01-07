@@ -35,6 +35,8 @@ const SectionTitle = styled.h3`
 
 const ArticleStyled = styled.div`
   display: flex;
+  justify-content: space-between;
+  width: 100%;
   height: 30vh;
   justify-content: space-between;
 
@@ -45,7 +47,9 @@ const ArticleStyled = styled.div`
 
 const LeftBox = styled.a`
   height: 100%;
-  width: 100%;
+  width: calc((100% - (10px * 2)) / 2);
+  box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
   display: flex;
   align-items: center;
   background-color: black;
@@ -56,6 +60,8 @@ const LeftBox = styled.a`
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     font-size: 1.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
   &:hover {
@@ -66,7 +72,10 @@ const LeftBox = styled.a`
 
 const RightBox = styled.a`
   height: 100%;
-  width: 100%;
+  
+  width: calc((100% - (10px * 2)) / 2);
+  box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.13);
+  border-radius: 5px;
   display: flex;
   font-size: 2rem;
   background-color: black;
@@ -77,6 +86,7 @@ const RightBox = styled.a`
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     font-size: 1.5rem;
+    width: 100%;
   }
 
   &:hover {
