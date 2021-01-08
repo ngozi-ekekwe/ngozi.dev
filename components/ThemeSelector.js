@@ -21,7 +21,6 @@ const ThemeSelectorStyled = styled.section`
   min-height: 4vh;
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
   color: white;
 `;
@@ -34,9 +33,9 @@ const ToggleWrapper = styled.div`
 
 const Label = styled.label`
   display: inline-block;
-  height: 25px;
+  height: 26px;
   position: relative;
-  width: 55px;
+  width: 60px;
 `;
 
 const Slider = styled.div`

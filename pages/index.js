@@ -22,7 +22,7 @@ export default function Home({ setCurrentTheme, currentTheme }) {
           name="keywords"
           content="Nextjs, React, Developer, Berlin, Germany,"
         ></meta>
-         <meta name="viewport" content="width=device-width,initial-scale=1" />
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <meta name="msapplication-TileColor" content="#4831D8" />
         <meta
           name="description"
@@ -63,7 +63,7 @@ export default function Home({ setCurrentTheme, currentTheme }) {
         <Journey />
         <Articles />
         <Sidebar isActive={isActive} />
-        <Cursor />
+        {/* <Cursor /> */}
       </main>
       <Footer />
     </>

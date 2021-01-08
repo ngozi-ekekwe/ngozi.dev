@@ -9,9 +9,6 @@ function Header({ setIsActive, isActive, setCurrentTheme, currentTheme }) {
     <HeaderWrapper>
       <StyledHeader>
         <Nav>
-          <Logo href="/" id="logo">
-            ng.me
-          </Logo>
           <ThemeSelector
             setCurrentTheme={setCurrentTheme}
             currentTheme={currentTheme}
