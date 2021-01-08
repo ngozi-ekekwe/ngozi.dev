@@ -33,51 +33,24 @@ export default function Home({ setCurrentTheme, currentTheme }) {
           name="description"
           content="Personal Portfolio site for Ngozi Ekekwe. - Frontend Engineer living and working in Berlin"
         />
-        <meta
-          name="keywords"
-          content="Nextjs, React, Developer, Berlin, Germany, Female, Frontend developer"
-        />
-        <meta name="author" content="Ngozi Ekekwe" />
-        <title>{SEO_TITLE}</title>
-
-        {/* Twitter Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@NgoziEkekwe" />
-        <meta name="twitter:creator" content="@NgoziEkekwe" />
-        <meta name="twitter:url" content="https://ngozi.dev/" />
-        <meta
-          name="twitter:title"
-          content="Ngozi Ekekwe - Frontend Engineer."
-        />
-        <meta
-          name="twitter:image"
-          content="https://ngozi.dev/ngozi-ekekwe.jpg"
-        />
-        <meta
-          name="twitter:description"
-          content="Ngozi Ekekwe - Frontend Engineer living in Berlin."
-        />
-
-        <meta property="og:url" content="https://ngozi.dev" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Ngozi Ekekwe - Frontend Engineer." />
-        <meta
-          property="og:description"
-          content="Ngozi Ekekwe - Frontend Engineer living in Berlin."
-        />
-        <meta
-          property="og:image"
-          content="https://ngozi.dev/ngozi-ekekwe.jpg"
-        />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:site_name" content="Ngozi Ekekwe" />
-        
-        <meta property="og:image:type" content="image/jpg" />
-        <meta
-          property="og:image:alt"
-          content="Profile picture of me, Ngozi Ekekwe"
-        />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `{
+  "@context": "https://schema.org/",
+  "@type": "Person",
+  "name": "Ngozi Ekekwe",
+  "url": "https://ngozi.dev/",
+  "image": "https://ngozi.dev/ngozi-ekekwe.jpg",
+  "sameAs": "https://twitter.com/NgoziEkekwe",
+  "jobTitle": "Frontend Developer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Finleap Connect"
+  }  
+}`,
+          }}
+        ></script>
       </Head>
       <Header
         isActive={isActive}
