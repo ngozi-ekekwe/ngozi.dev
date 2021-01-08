@@ -22,7 +22,7 @@ function Journey() {
             beautiful things.
           </Paragraph>
           <Paragraph>
-            I love travelling but I still get anxious when I fly so I prepare to
+            I love travelling but I still get anxious when I fly so I prefer to
             travel by train.
           </Paragraph>
 

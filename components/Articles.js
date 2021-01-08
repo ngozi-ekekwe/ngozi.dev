@@ -7,7 +7,7 @@ function Articles() {
         <SectionTitle>Journal</SectionTitle>
         <ArticleStyled>
           <LeftBox href="https://medium.com/@rose.ekekwe">
-            <h3>Meduim</h3>
+            <h3>Medium</h3>
           </LeftBox>
           <RightBox href="https://dev.to/ngoziekekwe">
             <h3>Dev.to</h3>
