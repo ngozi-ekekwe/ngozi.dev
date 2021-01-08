@@ -1,31 +1,16 @@
-import React, { useState } from "react";
-import Head from "next/head";
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { SEO_TITLE, BROWSER_CONSOLE_TEXT } from "utils/constants";
-import Header from "components/Header";
-import Sidebar from "components/Sidebar";
-import Introduction from "components/Introduction";
-import Projects from "components/Projects";
-import Experiences from "components/Experience";
-import Articles from "components/Articles";
-import Journey from "components/Journey";
-import Footer from "components/Footer";
 
-export default function Home({ setCurrentTheme, currentTheme }) {
-  const [isActive, setIsActive] = useState(false);
+class MyDocument extends Document {
+  static async getInitialProps(ctx) {
+    const initialProps = await Document.getInitialProps(ctx)
+    return { ...initialProps }
+  }
 
-  const showConsoleSuprise = async () => {
-    return console.log(
-      `${await import("raw-loader!utils/troll.text").then((m) => m.default)}
-        %c${BROWSER_CONSOLE_TEXT}`,
-      "color: #fa6400; font-size: 15px"
-    );
-  };
-
-  showConsoleSuprise();
-
-  return (
-    <>
-      <Head>
+  render() {
+    return (
+      <Html lang="en">
+        <Head />
         <meta charSet="UTF-8" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -56,22 +41,14 @@ export default function Home({ setCurrentTheme, currentTheme }) {
         <meta property="og:image:alt" content="Profile picture of me, Ngozi Ekekwe" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <title>{SEO_TITLE}</title>
-      </Head>
-      <Header
-        isActive={isActive}
-        setIsActive={setIsActive}
-        setCurrentTheme={setCurrentTheme}
-        currentTheme={currentTheme}
-      />
-      <main>
-        <Introduction />
-        <Projects />
-        <Experiences />
-        <Journey />
-        <Articles />
-        <Sidebar isActive={isActive} />
-      </main>
-      <Footer />
-    </>
-  );
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
+  }
 }
+
+
+export default MyDocument
