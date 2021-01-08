@@ -1,8 +1,8 @@
 export const SEO_TITLE = "Ngozi Ekekwe Frontend developer";
-export const INTRODUCTION_NAME = "Ngozi Ekekwe";
-export const INTRODUCTION_TEXT = `I’m a Front-End Developer currently living and working in Berlin. I
-am passionate about building products that are accessible,
-responsive, highly performant, and aesthetically pleasing to use.`;
+export const INTRODUCTION_NAME = "Hi, I'm Ngozi Ekekwe ";
+export const INTRODUCTION_TEXT = `A front-end developer currently living and working in Berlin. I'm passionate about building products that are accessible,
+responsive, highly performant, and aesthetically pleasing to use.
+I also enjoy working in teams and independently to solve problems`;
 export const PROJECT_SECTION = "Selected Projects";
 export const PROJECT_SOURCE_CODE = "source sode";
 export const PROJECT_LIVE_SITE = "live site";
@@ -10,17 +10,25 @@ export const PROJECT_LIVE_SITE = "live site";
 export const JOURNEY_SECTION = "Journey & Interests";
 export const JOURNEY_MAP = [
   ` I have a BSc in computer science from Covenant University, although
-I only started programming in my second year I started programming
+I only started programming in my second year.`,
+`I started programming
 in C# and Java while I was in school and then I adopted JavaScript
-just immediately after school.`,
+just immediately after.`,
   `I draw my inspiration from events, things I see online and my
 interactions with people. I sketch out what I need to build and the
 components. This serves as a guide for me as I develop.`,
   `I decided to focus and learn web development because of my love for
-beautiful things.`,
+beautiful aesthetics.`,
+
+`I'm proficient in JavaScript, React, NextJS for building user facing components`,
+
 `I love travelling but I still get anxious when I fly so I prefer to
 travel by train.`,
-`Currently learning German on Duolingo`
+
+`I work in an agile software development environment, interacting and
+collaborating with diverse teams to meet customer’s expectations and needs.`,
+
+`Currently learning Deutsch on Duolingo - [Ngozi906499]`,
 ];
 
 export const EXPERIENCE_TEXT = "Experience";

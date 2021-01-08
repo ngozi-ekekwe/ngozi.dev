@@ -41,12 +41,12 @@ function Projects() {
                     </ProjectTagWrapper>
                     <ProjectFooter>
                     {project.github && (
-                      <ProjectLink href={project.github}>
+                      <ProjectLink href={project.github} target="_blank">
                         {PROJECT_SOURCE_CODE}
                       </ProjectLink>
                     )}
                     {project.live && (
-                      <ProjectLink href={project.live}>{PROJECT_LIVE_SITE}</ProjectLink>
+                      <ProjectLink href={project.live} target="_blank">{PROJECT_LIVE_SITE}</ProjectLink>
                     )}
                   </ProjectFooter>
                   </ProjectContent>

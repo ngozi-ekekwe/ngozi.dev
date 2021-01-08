@@ -11,10 +11,10 @@ function Articles() {
       <ArticleWrapper>
         <SectionTitle>{ARTICLE_SECTION}</SectionTitle>
         <ArticleStyled>
-          <LeftBox href="https://medium.com/@rose.ekekwe">
+          <LeftBox href="https://medium.com/@rose.ekekwe" target="_blank">
             <h3>{ARTICLE_LEFT_BLOCK}</h3>
           </LeftBox>
-          <RightBox href="https://dev.to/ngoziekekwe">
+          <RightBox href="https://dev.to/ngoziekekwe" target="_blank">
             <h3>{ARTICLE_RIGHT_BLOCK}</h3>
           </RightBox>
         </ArticleStyled>

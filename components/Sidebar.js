@@ -19,13 +19,13 @@ function Sidebar({ isActive }) {
         </Contact>
         <ul>
           <li>
-            <a href="https://github.com/ngozi-ekekwe">{GITHHUB}</a>
+            <a href="https://github.com/ngozi-ekekwe" target="_blank">{GITHHUB}</a>
           </li>
           <li>
-            <a href="https://twitter.com/NgoziEkekwe">{TWITTER}</a>
+            <a href="https://twitter.com/NgoziEkekwe" target="_blank">{TWITTER}</a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/ekekwengozi/">{LINKEDIN}</a>
+            <a href="https://www.linkedin.com/in/ekekwengozi/" target="_blank">{LINKEDIN}</a>
           </li>
         </ul>
       </Wrapper>

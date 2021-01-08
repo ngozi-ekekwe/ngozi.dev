@@ -50,7 +50,7 @@ const Paragraph = styled.li`
 
   &::before {
     content: "•";
-    color: red;
+    color: #fa6400;
     display: inline-block;
     width: 1.3em;
     margin-left: -1em;

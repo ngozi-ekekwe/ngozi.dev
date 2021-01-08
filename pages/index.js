@@ -3,7 +3,7 @@ import Head from "next/head";
 import {
   SEO_TITLE,
   BROWSER_CONSOLE_TEXT
-} from "../utils/constants";
+} from "utils/constants";
 import Header from "components/Header";
 import Sidebar from "components/Sidebar";
 import Introduction from "components/Introduction";
