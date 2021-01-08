@@ -58,14 +58,14 @@ const ExperiencesStyled = styled.section`
   background-image: ${(props) => props.theme.defaultColor};
 `;
 
-const ExperienceWrapper = styled.section`
+const ExperienceWrapper = styled.div`
   width: 80%;
   max-width: ${(props) => props.theme.maxWidth};
   overflow: hidden;
   margin: 0 auto;
 `;
 
-const SectionTitle = styled.h3`
+const SectionTitle = styled.h2`
   font-size: 2rem;
 `;
 

@@ -43,7 +43,7 @@ const JourneyWrapper = styled.div`
   margin: 0 auto;
 `;
 
-const SectionTitle = styled.h3`
+const SectionTitle = styled.h2`
   font-size: 2rem;
   padding: 2rem 0;
   list-style: none;

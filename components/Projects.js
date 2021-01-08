@@ -64,7 +64,7 @@ const ProjectDiv = styled.section`
   background-color: ${(props) => props.theme.headerBackgroundColor};
 `;
 
-const ProjectsStyled = styled.article`
+const ProjectsStyled = styled.div`
   width: 80%;
   max-width: ${(props) => props.theme.maxWidth};
   margin: 0rem auto;
@@ -118,7 +118,7 @@ to {
 }
  `;
 
-const ProjectWrapper = styled.section`
+const ProjectWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -156,7 +156,7 @@ const ShortDescription = styled.p`
   }
 `;
 
-const SectionTitle = styled.h3`
+const SectionTitle = styled.h2`
   font-size: 2rem;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
@@ -164,7 +164,7 @@ const SectionTitle = styled.h3`
   }
 `;
 
-const Project = styled.div`
+const Project = styled.article`
   width: calc((100% - (10px * 2)) / 2);
   height: 400px;
   position: relative;

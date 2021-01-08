@@ -22,7 +22,10 @@ export default function Home({ setCurrentTheme, currentTheme }) {
           name="keywords"
           content="Nextjs, React, Developer, Berlin, Germany,"
         ></meta>
-         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
         <meta name="msapplication-TileColor" content="#4831D8" />
         <meta
           name="description"
@@ -54,8 +57,12 @@ export default function Home({ setCurrentTheme, currentTheme }) {
         {/* facebook */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
       </Head>
-      <Header isActive={isActive} setIsActive={setIsActive} setCurrentTheme={setCurrentTheme}
-          currentTheme={currentTheme} />
+      <Header
+        isActive={isActive}
+        setIsActive={setIsActive}
+        setCurrentTheme={setCurrentTheme}
+        currentTheme={currentTheme}
+      />
       <main>
         <Introduction />
         <Projects />

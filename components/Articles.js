@@ -28,7 +28,7 @@ const ArticleWrapper = styled.article`
   margin: auto;
 `;
 
-const SectionTitle = styled.h3`
+const SectionTitle = styled.h2`
   font-size: 2rem;
   padding: 2rem 0;
 `;

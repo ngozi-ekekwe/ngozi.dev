@@ -95,22 +95,6 @@ const Name = styled.h1`
   position: relative;
   z-index: 1;
 
-  // &::after {
-  //   background-color: #fa6400;
-  //   bottom: 0;
-  //   content: " ";
-  //   display: block;
-  //   transition: 2s linear height;
-  //   height: 50%;
-  //   left: 7px;
-  //   opacity: 0.5;
-  //   position: absolute;
-  //   width: calc(100%);
-  //   animation-name: ${Linear};
-  //   animation-duration: 0.65s;
-  //   z-index: -1;
-  // }
-
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     font-size: 1.5rem;
   }
