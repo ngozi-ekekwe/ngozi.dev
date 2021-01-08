@@ -1,32 +1,21 @@
 import styled from "styled-components";
+import { JOURNEY_SECTION, JOURNEY_MAP } from 'utils/constants';
 
 function Journey() {
   return (
     <JournerStyled>
       <JourneyWrapper>
-        <SectionTitle>Journey & Interests</SectionTitle>
+        <SectionTitle>{JOURNEY_SECTION}</SectionTitle>
         <Description>
-          <Paragraph>
-            I have a BSc in computer science from Covenant University, although
-            I only started programming in my second year I started programming
-            in C# and Java while I was in school and then I adopted JavaScript
-            just immediately after school.
-          </Paragraph>
-          <Paragraph>
-            I draw my inspiration from events, things I see online and my
-            interactions with people. I sketch out what I need to build and the
-            components. This serves as a guide for me as I develop.
-          </Paragraph>
-          <Paragraph>
-            I decided to focus and learn web development because of my love for
-            beautiful things.
-          </Paragraph>
-          <Paragraph>
-            I love travelling but I still get anxious when I fly so I prefer to
-            travel by train.
-          </Paragraph>
-
-          <Paragraph>Currently learning German on Duolingo</Paragraph>
+          {
+            JOURNEY_MAP && JOURNEY_MAP.map((journey, index) => {
+              return (
+                <Paragraph key={index}>
+                  {journey}
+                </Paragraph>
+              )
+            })
+          }
         </Description>
       </JourneyWrapper>
     </JournerStyled>

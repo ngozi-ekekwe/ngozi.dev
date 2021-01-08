@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import React, { useEffect, useRef, useState } from "react";
+import { INTRODUCTION_NAME, INTRODUCTION_TEXT } from 'utils/constants';
 
 function Introduction() {
   const [logoHeight, setLogoHeight] = useState(250);
@@ -26,12 +27,10 @@ function Introduction() {
   return (
     <div>
       <StyledIntroduction>
-        <Name>Ngozi Ekekwe</Name>
+        <Name>{INTRODUCTION_NAME}</Name>
         <DescriptionWrapper>
           <Description>
-            I’m a Front-End Developer currently living and working in Berlin. I
-            am passionate about building products that are accessible,
-            responsive, highly performant, and aesthetically pleasing to use.
+            {INTRODUCTION_TEXT}
           </Description>
           <SkillWrapper>
             <img src="/svgs/reactlogo.svg" alt="next" />

@@ -1,13 +1,14 @@
 import styled from "styled-components";
+import { SAY_HELLO, FOOTER_TIME_STAMP, FOOTER_NOTE } from "utils/constants";
 
 function Footer() {
   return (
     <FooterStyled>
       <div>
-      <button>Say Hello 👋🏼</button>
+        <button>{SAY_HELLO}</button>
         <div className="flex">
-          <small>Designed and developed by me 💞</small>
-          <small>&copy; Forever and ever until the end of time</small>
+          <small>{FOOTER_NOTE}</small>
+          <small>&copy; {FOOTER_TIME_STAMP}</small>
         </div>
       </div>
     </FooterStyled>

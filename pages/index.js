@@ -1,21 +1,40 @@
 import React, { useState } from "react";
 import Head from "next/head";
-import Header from "../components/Header";
-import Cursor from "../components/Cursor";
-import Sidebar from "../components/Sidebar";
-import Introduction from "../components/Introduction";
-import Projects from "../components/Projects";
-import Experiences from "../components/Experience";
-import Articles from "../components/Articles";
-import Journey from "../components/Journey";
-import Footer from "../components/Footer";
+import {
+  SEO_TITLE,
+  BROWSER_CONSOLE_TEXT
+} from "../utils/constants";
+import Header from "components/Header";
+import Sidebar from "components/Sidebar";
+import Introduction from "components/Introduction";
+import Projects from "components/Projects";
+import Experiences from "components/Experience";
+import Articles from "components/Articles";
+import Journey from "components/Journey";
+import Footer from "components/Footer";
+
 
 export default function Home({ setCurrentTheme, currentTheme }) {
   const [isActive, setIsActive] = useState(false);
+
+  const showConsoleSuprise = async () => {
+    return (
+      console.log(
+        `${await import('raw-loader!utils/troll.text').then(
+          m => m.default
+        )}
+        %c${BROWSER_CONSOLE_TEXT}`,
+        "color: #fa6400; font-size: 15px"
+      )
+    )
+  }
+
+  showConsoleSuprise();
+
   return (
     <>
       <Head>
-        <title>Ngozi Ekekwe Frontend developer</title>
+        <title>{SEO_TITLE}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta charSet="UTF-8" />
         <meta
@@ -29,7 +48,7 @@ export default function Home({ setCurrentTheme, currentTheme }) {
         <meta name="msapplication-TileColor" content="#4831D8" />
         <meta
           name="description"
-          content="Ngozi Ekekwe - Frontend Engineer living and working in Berlin"
+          content="Personal Portfolio site for Ngozi Ekekwe. - Frontend Engineer living and working in Berlin"
         />
         {/* Twitter Tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -70,7 +89,6 @@ export default function Home({ setCurrentTheme, currentTheme }) {
         <Journey />
         <Articles />
         <Sidebar isActive={isActive} />
-        {/* <Cursor /> */}
       </main>
       <Footer />
     </>

@@ -1,27 +1,31 @@
 import styled from "styled-components";
-import ThemeSelector from "./ThemeSelector";
+import {
+  TWITTER,
+  LINKEDIN,
+  GITHHUB,
+  THANK_YOU_TEXT,
+  QUESTION_TEXT,
+  SAY_HELLO,
+} from "../utils/constants";
 
 function Sidebar({ isActive }) {
   return (
     <SidebarStyled className={isActive ? "active" : ""}>
       <Wrapper>
-        <Header>Hello there!, thank you for visiting my porftfolio</Header>
-
+        <Header>{THANK_YOU_TEXT}</Header>
         <Contact>
-          <p>
-            Got a question or proposal, or just want to say hello? Go ahead.
-          </p>
-          <button>Say Hello 👋🏼</button>
+          <p>{QUESTION_TEXT}</p>
+          <button>{SAY_HELLO}</button>
         </Contact>
         <ul>
           <li>
-            <a href="https://github.com/ngozi-ekekwe">Github</a>
+            <a href="https://github.com/ngozi-ekekwe">{GITHHUB}</a>
           </li>
           <li>
-            <a href="https://twitter.com/NgoziEkekwe">Twitter</a>
+            <a href="https://twitter.com/NgoziEkekwe">{TWITTER}</a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/ekekwengozi/">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/ekekwengozi/">{LINKEDIN}</a>
           </li>
         </ul>
       </Wrapper>

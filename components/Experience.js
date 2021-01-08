@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
-import { experienceDirectory } from "../utils/experiences";
+import { experienceDirectory } from "utils/experiences";
+import {
+  EXPERIENCE_TEXT
+} from "../utils/constants";
 
 function Experiences() {
   const workExperience = experienceDirectory;
@@ -8,7 +11,7 @@ function Experiences() {
   return (
     <ExperiencesStyled>
       <ExperienceWrapper>
-        <SectionTitle>Experience</SectionTitle>
+        <SectionTitle>{EXPERIENCE_TEXT}</SectionTitle>
         <ExperienceLayout>
           {experienceDirectory &&
             experienceDirectory.map((experience, index) => {

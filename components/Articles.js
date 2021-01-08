@@ -1,16 +1,21 @@
 import styled from "styled-components";
+import {
+  ARTICLE_SECTION,
+  ARTICLE_LEFT_BLOCK,
+  ARTICLE_RIGHT_BLOCK,
+} from "utils/constants";
 
 function Articles() {
   return (
     <ArticleDiv>
       <ArticleWrapper>
-        <SectionTitle>Journal</SectionTitle>
+        <SectionTitle>{ARTICLE_SECTION}</SectionTitle>
         <ArticleStyled>
           <LeftBox href="https://medium.com/@rose.ekekwe">
-            <h3>Medium</h3>
+            <h3>{ARTICLE_LEFT_BLOCK}</h3>
           </LeftBox>
           <RightBox href="https://dev.to/ngoziekekwe">
-            <h3>Dev.to</h3>
+            <h3>{ARTICLE_RIGHT_BLOCK}</h3>
           </RightBox>
         </ArticleStyled>
       </ArticleWrapper>
@@ -72,7 +77,7 @@ const LeftBox = styled.a`
 
 const RightBox = styled.a`
   height: 100%;
-  
+
   width: calc((100% - (10px * 2)) / 2);
   box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.13);
   border-radius: 5px;

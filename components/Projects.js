@@ -1,11 +1,12 @@
-import { projectsDirectory } from "../utils/projects";
+import { projectsDirectory } from "utils/projects";
 import styled, { keyframes } from "styled-components";
+import { PROJECT_SOURCE_CODE, PROJECT_LIVE_SITE, PROJECT_SECTION } from '../utils/constants';
 
 function Projects() {
   return (
     <ProjectDiv>
       <ProjectsStyled>
-        <SectionTitle>Selected Projects</SectionTitle>
+        <SectionTitle>{PROJECT_SECTION}</SectionTitle>
         <ProjectWrapper>
           {projectsDirectory &&
             projectsDirectory.map((project, index) => {
@@ -41,11 +42,11 @@ function Projects() {
                     <ProjectFooter>
                     {project.github && (
                       <ProjectLink href={project.github}>
-                        source sode
+                        {PROJECT_SOURCE_CODE}
                       </ProjectLink>
                     )}
                     {project.live && (
-                      <ProjectLink href={project.live}>live site</ProjectLink>
+                      <ProjectLink href={project.live}>{PROJECT_LIVE_SITE}</ProjectLink>
                     )}
                   </ProjectFooter>
                   </ProjectContent>

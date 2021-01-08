@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import CreateGlobalStyle from '../utils/globalStyles';
+import CreateGlobalStyle from 'utils/globalStyles';
 import { ThemeProvider } from "styled-components";
-import { lightTheme, darkTheme, screenSizes } from "../theme";
-import '../styles/globals.css'
+import { lightTheme, darkTheme, screenSizes } from "theme";
+import 'styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   const [isMounted, setIsMounted] = useState(false);

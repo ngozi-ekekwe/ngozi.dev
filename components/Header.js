@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ThemeSelector from "./ThemeSelector";
+import ThemeSelector from "components/ThemeSelector";
 
 function Header({ setIsActive, isActive, setCurrentTheme, currentTheme }) {
   const toggleMenu = () => {
