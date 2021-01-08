@@ -18,8 +18,8 @@ function Experiences() {
                   className={carouselIndex === index ? "active" : ""}
                 >
                   <SingleExperienceWrapper>
-                    <h1>{experience.role}</h1>
-                    <h2>{experience.company}</h2>
+                    <h1>{experience.company}</h1>
+                    <h2>{experience.role}</h2>
                     <small>{experience.timeLine}</small>
                     <p>{experience.description}</p>
                   </SingleExperienceWrapper>
