@@ -88,7 +88,7 @@ const ProjectContent = styled.div`
 `;
 
 const ProjectHashTag = styled.span`
-  color: #64707d;
+  color: #8B949E;
   font-size: 1rem;
   & + & {
     padding-left: 1rem;
@@ -140,7 +140,7 @@ const ProjectHeader = styled.header`
 
 const ProjectDescription = styled.p`
   line-height: 1.7;
-  color: #64707d;
+  color: #8B949E;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     display: none;
@@ -149,10 +149,10 @@ const ProjectDescription = styled.p`
 
 const ShortDescription = styled.p`
   display: none;
-  color: #64707d;
+  color: #8B949E;
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     display: block;
-    color: #64707d;
+    color: #8B949E;
   }
 `;
 

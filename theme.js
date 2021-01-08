@@ -3,7 +3,7 @@ export const color = {
   backgroundLight: "#ffffff",
   linearGradient: "linear-gradient(to right, #e3ffe7, #d9e7ff)",
   defaultLightColor: "linear-gradient(to right, #e3ffe7, #d9e7ff)",
-  white: "#C9D1D9",
+  white: "white",
   black: "#24292E",
   plainBlack: 'black',
   lightGray: "#fafafa"
