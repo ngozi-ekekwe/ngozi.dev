@@ -35,9 +35,9 @@ const ToggleWrapper = styled.div`
 
 const Label = styled.label`
   display: inline-block;
-  height: 26px;
+  height: 24px;
   position: relative;
-  width: 60px;
+  width: 50px;
 `;
 
 const Slider = styled.div`
@@ -54,11 +54,11 @@ const Slider = styled.div`
     background-color: #fff;
     bottom: 3px;
     content: "";
-    height: 20px;
+    height: 16px;
     left: 4px;
     position: absolute;
     transition: 0.4s;
-    width: 20px;
+    width: 16px;
   }
 
   &.round {
