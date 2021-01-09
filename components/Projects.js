@@ -1,6 +1,10 @@
 import { projectsDirectory } from "utils/projects";
 import styled, { keyframes } from "styled-components";
-import { PROJECT_SOURCE_CODE, PROJECT_LIVE_SITE, PROJECT_SECTION } from '../utils/constants';
+import {
+  PROJECT_SOURCE_CODE,
+  PROJECT_LIVE_SITE,
+  PROJECT_SECTION,
+} from "../utils/constants";
 
 function Projects() {
   return (
@@ -12,9 +16,11 @@ function Projects() {
             projectsDirectory.map((project, index) => {
               return (
                 <Project className={project.block ? "flex" : ""} key={index}>
-                  {project.block && <ProjectImage>
-                    <img src={project.backgroundImage} alt="" />
-                  </ProjectImage>}
+                  {project.block && (
+                    <ProjectImage>
+                      <img src={project.backgroundImage} alt="" />
+                    </ProjectImage>
+                  )}
                   <ProjectContent>
                     <ProjectHeader>{project.name}</ProjectHeader>
                     <ShortDescription>{project.short}</ShortDescription>
@@ -24,7 +30,9 @@ function Projects() {
                     <ProjectTagWrapper>
                       {project.tags &&
                         project.tags.map((tag, index) => {
-                          return <ProjectHashTag key={index}>{tag}</ProjectHashTag>;
+                          return (
+                            <ProjectHashTag key={index}>{tag}</ProjectHashTag>
+                          );
                         })}
                     </ProjectTagWrapper>
                     <ProjectTagWrapper>
@@ -40,15 +48,19 @@ function Projects() {
                         })}
                     </ProjectTagWrapper>
                     <ProjectFooter>
-                    {project.github && (
-                      <ProjectLink href={project.github} target="_blank">
-                        {PROJECT_SOURCE_CODE}
-                      </ProjectLink>
-                    )}
-                    {project.live && (
-                      <ProjectLink href={project.live} target="_blank">{PROJECT_LIVE_SITE}</ProjectLink>
-                    )}
-                  </ProjectFooter>
+                      <ProjectLinkWrapper>
+                      {project.github && (
+                        <ProjectLink href={project.github} target="_blank">
+                          <img src="/coding.svg" alt="coding" />
+                        </ProjectLink>
+                      )}
+                      {project.live && (
+                        <ProjectLink href={project.live} target="_blank">
+                          <img src="/link.svg" alt="foreign" />
+                        </ProjectLink>
+                      )}
+                      </ProjectLinkWrapper>
+                    </ProjectFooter>
                   </ProjectContent>
                 </Project>
               );
@@ -64,6 +76,15 @@ const ProjectDiv = styled.section`
   min-height: 100%;
   background-color: ${(props) => props.theme.headerBackgroundColor};
 `;
+
+const ProjectLinkWrapper = styled.div`
+  display: flex;
+
+  img {
+    width: 1em;
+    filter: ${(props) => props.theme.iconColor};
+  }
+`
 
 const ProjectsStyled = styled.div`
   width: 80%;
@@ -89,7 +110,7 @@ const ProjectContent = styled.div`
 `;
 
 const ProjectHashTag = styled.span`
-  color: #8B949E;
+  color: #8b949e;
   font-size: 1rem;
   & + & {
     padding-left: 1rem;
@@ -141,7 +162,7 @@ const ProjectHeader = styled.header`
 
 const ProjectDescription = styled.p`
   line-height: 1.7;
-  color: #8B949E;
+  color: #8b949e;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     display: none;
@@ -150,10 +171,10 @@ const ProjectDescription = styled.p`
 
 const ShortDescription = styled.p`
   display: none;
-  color: #8B949E;
+  color: #8b949e;
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     display: block;
-    color: #8B949E;
+    color: #8b949e;
   }
 `;
 
@@ -173,7 +194,6 @@ const Project = styled.article`
   box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.13);
   border-radius: 10px;
   margin-bottom: 3rem;
-
 
   &.flex {
     width: 100%;
@@ -236,20 +256,20 @@ const ProjectLink = styled.a`
   position: relative;
   z-index: 1;
 
-  &::after {
-    background-image: ${(props) => props.theme.defaultColor};
-    bottom: 0;
-    content: " ";
-    display: block;
-    height: 50%;
-    left: 7px;
-    position: absolute;
-    transform: scaleY(1);
-    transform-origin: bottom center;
-    transition: transform 0.3s;
-    width: calc(100%);
-    z-index: -1;
-  }
+  // &::after {
+  //   background-image: ${(props) => props.theme.defaultColor};
+  //   bottom: 0;
+  //   content: " ";
+  //   display: block;
+  //   height: 50%;
+  //   left: 7px;
+  //   position: absolute;
+  //   transform: scaleY(1);
+  //   transform-origin: bottom center;
+  //   transition: transform 0.3s;
+  //   width: calc(100%);
+  //   z-index: -1;
+  // }
 
   &:hover::after {
     transform: scaleY(2);

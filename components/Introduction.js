@@ -90,7 +90,6 @@ const StyledIntroduction = styled.div`
 
 const Name = styled.h1`
   font-size: 3.5rem;
-  // color: ${(props) => props.theme.bodyColor};
   position: relative;
   z-index: 1;
 

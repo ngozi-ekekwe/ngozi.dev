@@ -19,6 +19,7 @@ export const lightTheme = {
   defaultColor: color.defaultLightColor,
   background: color.backgroundLight,
   borderColor: color.lightGray,
+  iconColor: "filter: invert(100%) sepia(6%) saturate(2%) hue-rotate(76deg) brightness(109%) contrast(100%);"
 };
 
 export const darkTheme = {
@@ -31,6 +32,7 @@ export const darkTheme = {
   defaultColor: `linear-gradient(to right, ${color.backgroundDark}, ${color.backgroundDark})`,
   background: color.backgroundDark, 
   borderColor: color.lightGray,
+  iconColor: "invert(100%) sepia(6%) saturate(2%) hue-rotate(76deg) brightness(109%) contrast(100%)"
 };
 
 export const screenSizes = {
