@@ -39,11 +39,11 @@ export default function Home({ setCurrentTheme, currentTheme }) {
         <meta name="twitter:creator" content="@NgoziEkekwe"  key="twhandle"/>
         <meta name="twitter:url" content="https://ngozi.dev/" />
         <meta name="twitter:title" content="Ngozi Ekekwe - Frontend Engineer." />
-        <meta name="twitter:image" content="https://ngozi.dev/ngozi-ekekwe.jpg" />
+        <meta name="twitter:image" content="https://ngozi.dev/profile.JPG" />
         <meta name="twitter:description" content="Ngozi Ekekwe - Frontend Engineer living in Berlin." />
 
         <meta property="og:url" content="https://ngozi.dev" key="ogurl" />
-        <meta property="og:image" content="https://ngozi.dev/ngozi-ekekwe.jpg" key="ogimage"
+        <meta property="og:image" content="https://ngozi.dev/profile.JPG" key="ogimage"
         />
         <meta property="og:type" content="website" key={"ogtype"} />
         <meta property="og:title" content="Ngozi Ekekwe - Frontend Engineer." key="ogtitle" />
