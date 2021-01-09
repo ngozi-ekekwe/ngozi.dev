@@ -15,7 +15,7 @@ function Sidebar({ isActive }) {
         <Header>{THANK_YOU_TEXT}</Header>
         <Contact>
           <p>{QUESTION_TEXT}</p>
-          <button>{SAY_HELLO}</button>
+          <a href="mailto:rose.ekekwe@gmail.com">{SAY_HELLO}</a>
         </Contact>
         <ul>
           <li>
@@ -73,6 +73,11 @@ const Wrapper = styled.nav`
   justify-content: center;
   align-items: center;
 
+  p {
+    padding: 2rem 0;
+    font-weight: 400;
+  }
+
   ul {
     padding: 0;
     margin: 1.5rem 0;
@@ -104,8 +109,9 @@ const Wrapper = styled.nav`
 
 const Contact = styled.div`
   text-align: center;
+  margin-bottom: 1.5rem;
 
-  button {
+  a {
     background-color: #fa6400;
     border: none;
     color: white;

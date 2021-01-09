@@ -5,7 +5,7 @@ function Footer() {
   return (
     <FooterStyled>
       <div>
-        <button>{SAY_HELLO}</button>
+        <a href="mailto:rose.ekekwe@gmail.com">{SAY_HELLO}</a>
         <div className="flex">
           <small>{FOOTER_NOTE}</small>
           <small>&copy; {FOOTER_TIME_STAMP}</small>
@@ -46,10 +46,11 @@ const FooterStyled = styled.footer`
     flex-direction: column;
   }
 
-  button {
+  a {
     background-color: #fa6400;
     border: none;
     color: white;
+    cursor: pointer;
     font-size: 1.2rem;
     border-radius: 5px;
     padding: 0.5rem 1.5rem;

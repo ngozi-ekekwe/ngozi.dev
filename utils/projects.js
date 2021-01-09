@@ -39,13 +39,5 @@ export const projectsDirectory = [
     backgroundImage: "bg3.webp",
     block: false,
     tools: ["css", "html"],
-  },
-  // {
-  //   name: '3D Card',
-  //   url: 'https://practical-booth-16ec78.netlify.app/',
-  //   description: 'A fun take on encouraging young voters to vote in the general 2019 Nigerian elections A fun take on encouraging young voters to vote in the general 2019 Nigerian elections',
-  //   short: 'lavenderblushlavende',
-  //   block: true,
-  //   tags: ['css', 'html']
-  // },
+  }
 ];
