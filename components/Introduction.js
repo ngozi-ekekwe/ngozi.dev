@@ -144,7 +144,7 @@ const Avatar = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 3px solid #fa6400;
+  border: 5px solid #fa6400;
   z-index: 2;
   background-image: url("/profile.JPG");
   background-position: center;
