@@ -1,6 +1,6 @@
 export const SEO_TITLE = "Ngozi Ekekwe Frontend developer";
-export const INTRODUCTION_NAME = "Hi, I'm Ngozi Ekekwe ";
-export const INTRODUCTION_TEXT = `A front-end developer currently living and working in Berlin. I'm passionate about building products that are accessible,
+export const INTRODUCTION_NAME = "Hello 👋🏼";
+export const INTRODUCTION_TEXT = `I'm Ngozi Ekekwe, a front-end developer currently living and working in Berlin. I'm passionate about building products that are accessible,
 responsive, highly performant, and aesthetically pleasing to use.
 I also enjoy working in teams and independently to solve problems`;
 export const PROJECT_SECTION = "Selected Projects";

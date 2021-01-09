@@ -105,7 +105,7 @@ const DescriptionWrapper = styled.div`
   margin: 0 auto;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
-    padding: 1rem 0rem 3rem;
+    padding: 1rem 0rem 6rem;
     max-width: ${(props) => props.theme.maxWidth};
     width: 80%;
   }

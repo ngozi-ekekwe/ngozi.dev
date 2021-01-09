@@ -18,16 +18,13 @@ class MyDocument extends Document {
         <meta name="keywords" content="Nextjs, React, Developer, Berlin, Germany, Female, Frontend developer" />
         <meta name="author" content="Ngozi Ekekwe" />
 
-        <meta property="og:url" content="https://ngozi.dev" key="ogurl" />
-        <meta property="og:image" content="https://ngozi.dev/profile.JPG" key="ogimage"
-        />
-        <meta property="og:type" content="website" key={"ogtype"} />
+        <meta property="og:site_name" content="Ngozi Ekekwe" key="ogsitename" />
         <meta property="og:title" content="Ngozi Ekekwe - Frontend Engineer." key="ogtitle" />
         <meta property="og:description" content="Ngozi Ekekwe - Frontend Engineer living in Berlin." key="ogdesc" />
-       
+        <meta property="og:image:secure_url" content="https://ngozi.dev/profile.JPG" key="ogimage" />
+        <meta property="og:type" content="website" key={"ogtype"} />
+        <meta property="og:url" content="https://ngozi.dev" key="ogurl" />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:site_name" content="Ngozi Ekekwe" key="ogsitename" />
-        
         <meta property="og:image:type" content="image/jpg" />
         <meta property="og:image:alt" content="Profile picture of me, Ngozi Ekekwe" />
 
