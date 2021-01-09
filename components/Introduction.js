@@ -147,8 +147,8 @@ const Avatar = styled.div`
   border-radius: 50%;
   border: 3px solid #fa6400;
   z-index: 2;
-  background-image: url("/ngozi-ekekwe.jpg");
-  background-position: top;
+  background-image: url("/profile.JPG");
+  background-position: center;
   background-size: cover;
 `;
 
