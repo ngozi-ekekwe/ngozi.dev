@@ -95,7 +95,7 @@ const Name = styled.h1`
   z-index: 1;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 `;
 
@@ -105,7 +105,7 @@ const DescriptionWrapper = styled.div`
   margin: 0 auto;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
-    padding: 1rem 0rem 6rem;
+    padding: 1rem 0rem 4rem;
     max-width: ${(props) => props.theme.maxWidth};
     width: 80%;
   }
