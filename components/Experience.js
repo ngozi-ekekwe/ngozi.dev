@@ -58,6 +58,7 @@ to {
 
 const ExperiencesStyled = styled.section`
   width: 100%;
+  padding: 4rem 0;
   background-image: ${(props) => props.theme.defaultColor};
 `;
 

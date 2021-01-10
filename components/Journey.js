@@ -43,17 +43,11 @@ const Paragraph = styled.li`
   line-height: 1.7;
   font-size: 1.2rem;
   list-style: none;
+  padding: 1.5rem 1.2rem;
+  box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.13);
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     font-size: 1rem;
-  }
-
-  &::before {
-    content: "•";
-    color: #fa6400;
-    display: inline-block;
-    width: 1.3em;
-    margin-left: -1em;
   }
 `;
 
