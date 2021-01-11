@@ -112,10 +112,11 @@ const DescriptionWrapper = styled.div`
 
 const Description = styled.p`
   text-align: center;
+  font-weight: 300;
   padding-bottom: 1rem;
   color: ${(props) => props.theme.bodyColor};
   font-size: 1.5rem;
-  line-height: 2.17;
+  line-height: 2;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     font-size: 1.1rem;

@@ -20,7 +20,7 @@ export const projectsDirectory = [
       "Worked closely with two engineers to build the current website for Dirty Lemon, the beverage brand best known for making “anti-detox” a thing",
     block: false,
     live: "https://dirtylemon.com/",
-    tags: ["#api", "#prismic-api", "#e-commerce", "ui/ux"],
+    tags: ["#api", "#prismic-api", "#e-commerce"],
     backgroundImage: "bg3.webp",
     block: false,
     tools: ["next", "reactlogo", "css"],

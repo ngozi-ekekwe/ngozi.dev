@@ -162,7 +162,7 @@ const ProjectHeader = styled.header`
 
 const ProjectDescription = styled.p`
   line-height: 1.7;
-  color: #8b949e;
+  margin: 3rem 0;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     display: none;
@@ -171,10 +171,11 @@ const ProjectDescription = styled.p`
 
 const ShortDescription = styled.p`
   display: none;
-  color: #8b949e;
+  margin: 1rem 0;
+  font-weight: 400;
+  color: #00000;
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     display: block;
-    color: #8b949e;
   }
 `;
 

@@ -108,8 +108,8 @@ const SingleExperienceWrapper = styled.div`
 
   h2 {
     font-size: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 0.1rem;
+    margin-top: 0.9rem;
+    margin-bottom: 0.3rem;
     color: #64707d;
   }
 
@@ -119,6 +119,9 @@ const SingleExperienceWrapper = styled.div`
 
   p {
     line-height: 1.7;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 2rem 0;
   }
 `;
 
