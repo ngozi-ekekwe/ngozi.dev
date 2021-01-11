@@ -4,7 +4,7 @@ export const projectsDirectory = [
     url: "https://optimistic-engelbart-1d97fa.netlify.app/",
     short: "A Netflix Wannabe",
     description:
-      "A fun project project I decided to work on after spending my whole day binge watching movies on Netflix, I consumed TMDb's API to get movies, shows and other categories",
+      "A fun project I decided to work on after spending my whole day binge-watching movies on Netflix, I consumed TMDb's API to get movies, shows, and other categories.",
     github: "https://github.com/ngozi-ekekwe/reactive-movie",
     live: "https://reactive-movie.netlify.app/",
     tools: ["next", "reactlogo", "css"],
@@ -30,8 +30,8 @@ export const projectsDirectory = [
     name: "3D Card",
     url: "https://practical-booth-16ec78.netlify.app/",
     description:
-      "A responsive 3D card built built from an online class",
-    short: "An responsive 3D card built from an online class ",
+      "A responsive 3D card built from an online class",
+    short: "A responsive 3D card built from an online class",
     block: false,
     github: "https://github.com/ngozi-ekekwe/reactive-movie",
     live: "https://reactive-movie.netlify.app/",
