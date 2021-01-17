@@ -40,14 +40,15 @@ const SectionTitle = styled.h2`
 
 const Paragraph = styled.li`
   margin-bottom: 1.5rem;
-  line-height: 1.7;
+  line-height: 2;
   font-size: 1.2rem;
   list-style: none;
-  padding: 1.5rem 1.2rem;
+  padding: 3.5rem 3.2rem;
   box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.13);
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     font-size: 1rem;
+    padding: 1rem 1.3rem;
   }
 `;
 

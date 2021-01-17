@@ -120,7 +120,7 @@ const SingleExperienceWrapper = styled.div`
   p {
     line-height: 1.7;
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
     margin: 2rem 0;
   }
 `;

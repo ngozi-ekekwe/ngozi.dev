@@ -91,6 +91,7 @@ const StyledIntroduction = styled.div`
 const Name = styled.h1`
   font-size: 3.5rem;
   position: relative;
+  text-align: center;
   z-index: 1;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
@@ -145,7 +146,7 @@ const Avatar = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 5px solid #fa6400;
+  border: 8px solid #fa6400;
   z-index: 2;
   background-image: url("/profile.JPG");
   background-position: center;

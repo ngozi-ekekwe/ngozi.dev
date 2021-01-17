@@ -37,7 +37,7 @@ const Label = styled.label`
   display: inline-block;
   height: 24px;
   position: relative;
-  width: 50px;
+  width: 45px;
 `;
 
 const Slider = styled.div`
@@ -55,7 +55,7 @@ const Slider = styled.div`
     bottom: 3px;
     content: "";
     height: 16px;
-    left: 4px;
+    left: 1px;
     position: absolute;
     transition: 0.4s;
     width: 16px;
