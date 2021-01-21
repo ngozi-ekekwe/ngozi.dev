@@ -115,7 +115,7 @@ const Description = styled.p`
   text-align: center;
   font-weight: 300;
   padding-bottom: 1rem;
-  color: ${(props) => props.theme.bodyColor};
+  color: ${(props) => props.theme.highlightColor};
   font-size: 1.5rem;
   line-height: 2;
 

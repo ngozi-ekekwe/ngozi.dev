@@ -19,6 +19,7 @@ export const lightTheme = {
   defaultColor: color.defaultLightColor,
   background: color.backgroundLight,
   borderColor: color.lightGray,
+  highlightColor: color.black,
   iconColor: "filter: invert(100%) sepia(6%) saturate(2%) hue-rotate(76deg) brightness(109%) contrast(100%);"
 };
 
@@ -29,9 +30,10 @@ export const darkTheme = {
   bodyTextColor: color.white,
   headerBackgroundColor: "#161c23",
   headerTextColor: color.backgroundLight,
-  defaultColor: `linear-gradient(to right, ${color.backgroundDark}, ${color.backgroundDark})`,
+  defaultColor: `linear-gradient(to right, #161616, ${color.backgroundDark})`,
   background: color.backgroundDark, 
   borderColor: color.lightGray,
+  highlightColor: '#949495',
   iconColor: "invert(100%) sepia(6%) saturate(2%) hue-rotate(76deg) brightness(109%) contrast(100%)"
 };
 

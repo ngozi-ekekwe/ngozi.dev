@@ -21,9 +21,9 @@ function Experiences() {
                   className={carouselIndex === index ? "active" : ""}
                 >
                   <SingleExperienceWrapper>
-                    <h1>{experience.company}</h1>
-                    <h2>{experience.role}</h2>
+                    <h2>{experience.company}</h2>
                     <small>{experience.timeLine}</small>
+                    <h1>{experience.role}</h1>
                     <p>{experience.description}</p>
                   </SingleExperienceWrapper>
                 </SingleExperience>
@@ -110,11 +110,12 @@ const SingleExperienceWrapper = styled.div`
     font-size: 1rem;
     margin-top: 0.9rem;
     margin-bottom: 0.3rem;
-    color: #64707d;
+    color: ${(props) => props.theme.highlightColor};
   }
 
   small {
     font-size: 0.9rem;
+    color: ${(props) => props.theme.highlightColor};
   }
 
   p {
@@ -122,6 +123,7 @@ const SingleExperienceWrapper = styled.div`
     font-size: 1.2rem;
     font-weight: 400;
     margin: 2rem 0;
+    color: ${(props) => props.theme.highlightColor};
   }
 `;
 

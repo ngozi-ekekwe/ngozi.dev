@@ -1,0 +1,10 @@
+{
+  "theme_color": "#FA6400",
+  "background_color": "#FA6400",
+  "name": "ngozi.dev",
+  "short_name": "ngozi.dev",
+  "icons": [
+  ],
+  "start_url": "/",
+  "display": "standalone"
+}

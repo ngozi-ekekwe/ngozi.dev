@@ -51,12 +51,12 @@ function Projects() {
                       <ProjectLinkWrapper>
                       {project.github && (
                         <ProjectLink href={project.github} target="_blank">
-                          <img src="/coding.svg" alt="coding" />
+                          <p>Github</p><div><img src="/link.svg" alt="link" /></div>
                         </ProjectLink>
                       )}
                       {project.live && (
                         <ProjectLink href={project.live} target="_blank">
-                          <img src="/link.svg" alt="foreign" />
+                          <p>Webiste</p><div><img src="/link.svg" alt="link" /></div>
                         </ProjectLink>
                       )}
                       </ProjectLinkWrapper>
@@ -162,7 +162,8 @@ const ProjectHeader = styled.header`
 
 const ProjectDescription = styled.p`
   line-height: 1.7;
-  margin: 3rem 0;
+  color: ${(props) => props.theme.highlightColor};
+  margin: 1.5rem 0;
 
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     display: none;
@@ -173,7 +174,7 @@ const ShortDescription = styled.p`
   display: none;
   margin: 1rem 0;
   font-weight: 400;
-  color: #00000;
+  color: ${(props) => props.theme.highlightColor};
   @media screen and (max-width: ${(props) => props.theme.tablet}) {
     display: block;
   }
@@ -255,23 +256,23 @@ const ProjectLink = styled.a`
   margin-right: 1rem;
   font-size: 1.2rem;
   position: relative;
+  display: flex;
+  align-items:center;
+  // border: 1px solid red;
   z-index: 1;
 
-  // &::after {
-  //   background-image: ${(props) => props.theme.defaultColor};
-  //   bottom: 0;
-  //   content: " ";
-  //   display: block;
-  //   height: 50%;
-  //   left: 7px;
-  //   position: absolute;
-  //   transform: scaleY(1);
-  //   transform-origin: bottom center;
-  //   transition: transform 0.3s;
-  //   width: calc(100%);
-  //   z-index: -1;
-  // }
+  p {
+    padding-right: .5rem;
+    font-weight: 200;
+    font-size: 1rem;
+  }
 
+  img {
+    height: 15px;
+    width: 15px;
+  }
+
+  
   &:hover::after {
     transform: scaleY(2);
     background-color: #fa6400;
