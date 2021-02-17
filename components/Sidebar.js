@@ -3,7 +3,6 @@ import {
   TWITTER,
   LINKEDIN,
   GITHHUB,
-  THANK_YOU_TEXT,
   QUESTION_TEXT,
   SAY_HELLO,
 } from "../utils/constants";
@@ -12,9 +11,8 @@ function Sidebar({ isActive }) {
   return (
     <SidebarStyled className={isActive ? "active" : ""}>
       <Wrapper>
-        <Header>{THANK_YOU_TEXT}</Header>
+        <Header>{QUESTION_TEXT}</Header>
         <Contact>
-          <p>{QUESTION_TEXT}</p>
           <a href="mailto:rose.ekekwe@gmail.com">{SAY_HELLO}</a>
         </Contact>
         <ul>
@@ -109,7 +107,7 @@ const Wrapper = styled.nav`
 
 const Contact = styled.div`
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
 
   a {
     background-color: #fa6400;

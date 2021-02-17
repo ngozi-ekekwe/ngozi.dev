@@ -51,12 +51,12 @@ function Projects() {
                       <ProjectLinkWrapper>
                       {project.github && (
                         <ProjectLink href={project.github} target="_blank">
-                          <p>Github</p><div><img src="/link.svg" alt="link" /></div>
+                          <p>Source</p><div><img src="/link.svg" alt="link" /></div>
                         </ProjectLink>
                       )}
                       {project.live && (
                         <ProjectLink href={project.live} target="_blank">
-                          <p>Webiste</p><div><img src="/link.svg" alt="link" /></div>
+                          <p>View</p><div><img src="/link.svg" alt="link" /></div>
                         </ProjectLink>
                       )}
                       </ProjectLinkWrapper>

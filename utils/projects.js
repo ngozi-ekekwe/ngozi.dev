@@ -39,5 +39,20 @@ export const projectsDirectory = [
     backgroundImage: "bg3.webp",
     block: false,
     tools: ["css", "html"],
+  },
+
+  {
+    name: "Music Player",
+    url: "https://compassionate-thompson-c0a00f.netlify.app/",
+    description:
+      "Example app from a tutorial",
+    short: "Example app from a tutorial",
+    block: false,
+    github: "https://github.com/ngozi-ekekwe/react-player",
+    live: "https://compassionate-thompson-c0a00f.netlify.app/",
+    tags: [],
+    backgroundImage: "bg3.webp",
+    block: false,
+    tools: ["css", "html5"],
   }
 ];

@@ -1,5 +1,5 @@
 export const SEO_TITLE = "Ngozi Ekekwe Frontend developer";
-export const INTRODUCTION_NAME = "Hello, I'm Ngozi Ekekwe";
+export const INTRODUCTION_NAME = "Hi, I'm Ngozi Ekekwe";
 export const INTRODUCTION_TEXT = `A frontend developer currently living and working in Berlin. I'm passionate about building products that are accessible,
 responsive, highly performant, and aesthetically pleasing to use.
 I also enjoy working in teams and independently to solve problems.`;
@@ -30,7 +30,7 @@ export const GITHHUB = "Github";
 export const RESUME = "My Resume";
 
 export const THANK_YOU_TEXT =
-  "Thank you for visiting my portfolio";
+  "";
 export const QUESTION_TEXT =
   "Got a question or proposal, or want to say hello? Go ahead.";
 export const SAY_HELLO = "Say Hello 👋🏼";
